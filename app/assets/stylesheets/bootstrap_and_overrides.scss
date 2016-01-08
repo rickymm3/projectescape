@@ -1,0 +1,32 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Static version of css will use Glyphicons sprites by default
+  =require twitter-bootstrap-static/sprites
+*/
+html {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+
+}
+.navbar-brand {
+  padding: 0px;
+}
+
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a {
+
+}
+
+.navbar-nav {
+  padding-left: 15px;
+  a {
+    color: #424242;
+  }
+}
+
+.navbar {
+  margin-bottom: 0px;
+}

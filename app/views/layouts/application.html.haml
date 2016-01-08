@@ -1,0 +1,27 @@
+!!!
+%html{lang:"en"}
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %title= content_for?(:title) ? yield(:title) : "Welcome to Project Escape!"
+    = csrf_meta_tags
+    = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    %link{:href => "//fonts.googleapis.com/css?family=Open+Sans", :rel => "stylesheet", :type => "text/css"}
+    %link{href:"//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", rel:"stylesheet"}
+    = yield :head
+    %body
+      %header
+        .container
+          =render "layouts/header"
+      %nav
+      .container
+        .row
+          .col-lg-12.col-md-12.col-sm-12
+            = bootstrap_flash
+            = yield
+    %footer
+      .container
+        %p &copy; Project Escape 2016
