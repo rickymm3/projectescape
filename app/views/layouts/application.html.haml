@@ -17,11 +17,10 @@
         .container
           =render "layouts/header"
       %nav
-      .container
-        .row
-          .col-lg-12.col-md-12.col-sm-12
-            = bootstrap_flash
-            = yield
+      .row
+        .col-lg-12.col-md-12.col-sm-12
+          = bootstrap_flash
+          = yield
     %footer
       .container
         %p &copy; Project Escape 2016
