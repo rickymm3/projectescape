@@ -27,7 +27,7 @@ html {
 body {
   font-family: 'Open Sans'!important;
   background-color: #fff/* nb*/;
-  padding-top: 30px;
+  padding-top: 40px;
 }
 
 header {
@@ -43,7 +43,12 @@ header {
   font-weight: bolder;
 }
 .escape-image{
-  margin: 25px 0px;
+  margin-bottom: 15px;
+  img {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+  }
 }
 .info-image {
 //  background-image: image-url('repeating-bg.jpg');
