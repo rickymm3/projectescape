@@ -17,12 +17,12 @@
 
 body {
   font-family: 'Open Sans'!important;
-
-  background-color: #999a95;
-  padding-top: 50px;
+  background-color: #fff/* nb*/;
+  padding-top: 30px;
 }
+
 header {
-  padding: 10px 10px 10px 0px;
+  padding: 10px 10px 0px 10px;
 
   width: 100%;
   display:block;
@@ -32,6 +32,12 @@ header {
   font-family: Arial;
   font-size: 25px;
   font-weight: bolder;
+}
+.escape-image{
+  margin: 25px 0px;
+}
+.info-image {
+//  background-image: image-url('repeating-bg.jpg');
 }
 .red {
   float:left;
@@ -45,13 +51,13 @@ header {
   width: 600px;
   margin:auto;
 }
+
 .information {
+  padding: 0px 20px;
   margin-top: 20px;
-  color: #eee;
+  color: #ebebeb;
 }
 .what-is {
-  width: 600px;
-  margin: auto;
   text-align: center;
   margin-bottom: 30px;
   p {
@@ -63,34 +69,16 @@ header {
   letter-spacing: 3px;
   font-size: 35px;
   font-family: "Open Sans";
-  color: #eee;
-}
-.event {
-  float:left;
-  height: auto;
+  color: #999;
 }
 
 .events {
-  background-color:#eee;
-  display:block;
-  overflow:hidden;
-  position: relative;
-  padding-top: 10px;
-  width: 100%;
-  margin: auto;
-  padding-right: 40px;
-  ul {
-    list-style: none;
-    li {
-      width: 30%;
-      float:left;
-      padding: 10px;
-      margin-right: 5%;
-    }
-    li:last-child {
-      margin-right: 0%!important;
-    }
-  }
+  background-color:#ebebeb;
+  padding: 30px;
+}
+
+.event {
+  padding:0px 20px;
 }
 
 .event-icon {
@@ -102,9 +90,10 @@ header {
   letter-spacing: 3px;
 
   .event-label {
-    color: black;
+    color: #424242;
     letter-spacing: 3px;
     font-size: 16px;
+    font-weight: bold;
   }
   p {
     font-size: 12px;
@@ -113,9 +102,11 @@ header {
   }
 }
 
+.info-image {
+}
+
 footer {
   text-align: center;
-  margin-top: 150px;
 }
 
 .bookings {
