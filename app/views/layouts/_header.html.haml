@@ -12,7 +12,7 @@
       / Collect the nav links, forms, and other content for toggling
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         %ul.nav.navbar-nav
-          %li.active
+          %li
             %a{:href => "#"}
               About
               %span.sr-only (current)
@@ -35,4 +35,5 @@
                 %a{:href => "#"} One more separated link
         %ul.nav.navbar-nav.navbar-right
           %li
-            =link_to "Book Now", bookings_path
+            %p.navbar-btn
+              =link_to "Book Now!", bookings_path, class:'btn btn-success'
