@@ -25,6 +25,7 @@ html {
 }
 
 body {
+  color: #353131;
   font-family: 'Open Sans'!important;
   background-color: #fff/* nb*/;
   padding-top: 40px;
@@ -57,12 +58,8 @@ header {
   float:left;
   color:red;
 }
-.logo-text {
-  float:left;
-  color:white;
-}
+
 .booking {
-  color: #424242;
   padding-top:20px;
   width: 600px;
   margin:auto;
@@ -70,21 +67,18 @@ header {
 
 .information {
   margin-top: 20px;
-  color: #ebebeb;
 }
 .what-is {
   text-align: center;
   margin-bottom: 30px;
   p {
     letter-spacing: 1px;
-    color: black;
   }
 }
 .h1custom {
   letter-spacing: 3px;
   font-size: 35px;
   font-family: "Open Sans";
-  color: #424242;
 }
 
 .events {
@@ -94,21 +88,16 @@ header {
 
 .event {
   padding:0px 20px;
-}
-
-.event-icon {
-  -webkit-font-smoothing: antialiased !important;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-  color: white;
   text-align:center;
-  font-size: 50px;
-  letter-spacing: 3px;
-
-  .event-label {
-    color: #424242;
+  .event-icon {
+    -webkit-font-smoothing: antialiased !important;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    color: white;
+    font-size: 50px;
     letter-spacing: 3px;
-    font-size: 16px;
-    font-weight: bold;
+  }
+  .event-label {
+    font-size: 20px;
   }
   p {
     font-size: 12px;
@@ -116,6 +105,8 @@ header {
 
   }
 }
+
+
 
 .info-image {
 }
