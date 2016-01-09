@@ -13,9 +13,13 @@
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         %ul.nav.navbar-nav
           %li
-            %a{:href => "#"}
+            =link_to about_index_path do
               About
-              %span.sr-only (current)
+              %span.sr-only
+          %li
+            =link_to team_index_path do
+              Team
+              %span.sr-only
           %li.dropdown
             %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
               Corporate Events
