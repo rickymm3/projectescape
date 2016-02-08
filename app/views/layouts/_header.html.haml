@@ -8,7 +8,8 @@
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        = link_to (image_tag "projectescape-small.png"), root_path, class: 'navbar-brand'
+        = link_to root_path, class: 'navbar-brand' do
+          =image_tag "pe-logo.png", size:'50x50'
       / Collect the nav links, forms, and other content for toggling
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         %ul.nav.navbar-nav
@@ -50,4 +51,4 @@
                 Consohocken PA, 19403
           %li
             %p.navbar-btn
-              =link_to "Book Now!", bookings_path, class:'btn btn-success'
+              =link_to "Book Now!", bookings_path, class:'btn btn-warning'
