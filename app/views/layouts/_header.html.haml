@@ -40,5 +40,14 @@
         .divider-custom
         %ul.nav.navbar-nav.navbar-right
           %li
+            .map-marker
+              =link_to "", "directions"
+          %li
+            %p.location
+              =link_to "directions" do
+                1495 Alan Wood Rd.
+                %br
+                Consohocken PA, 19403
+          %li
             %p.navbar-btn
               =link_to "Book Now!", bookings_path, class:'btn btn-success'

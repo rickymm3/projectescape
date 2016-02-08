@@ -161,3 +161,46 @@ pre {
   font-weight: 400;
   line-height: 18.5714px;
 }
+
+.location {
+  font-size: 12px!important;
+  padding: 6px 10px 0px 7px;
+  margin-bottom: 0px;
+  a:hover {
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.loc_icon {
+  padding-bottom: 0px!important;
+}
+
+.map-marker {
+  display: block;
+  height: 36px;
+  width: 36px;
+  margin-top: 8px;
+  background-image: image-url('Google_Maps_Icon.png');
+  background-size: 36px 36px;
+  background-repeat: no-repeat;
+}
+
+.google-maps {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+  iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+}
+
+.center {
+  margin:auto;
+}
