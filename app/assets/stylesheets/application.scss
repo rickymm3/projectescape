@@ -14,7 +14,8 @@
  *= require_self
  *= require font-awesome
  */
-
+//dark yellow:  e3a912 || db0202  :dark red
+//light yellow: ebbc4f ||
 html {
   padding:0;
   margin:0;
@@ -96,7 +97,7 @@ header {
 }
 
 .events {
-  background-color:#586569;
+  background-color:#6e787b;
   padding: 30px;
 }
 
@@ -198,7 +199,7 @@ pre {
     color: white;
   }
   .phone-number {
-    color: #586569;
+    color: #6e787b;
   }
 }
 
@@ -278,7 +279,7 @@ pre {
   color: #231f20;
 }
 .brand-escape {
-  color:#586569;
+  color:#6e787b;
 }
 .brand-text-small-image {
   float:left;
@@ -320,6 +321,5 @@ pre {
 #time {
   font-size: 30px;
   color: #EBBC4F;
-  background-color: #586569;
   font-family: 'Iceland', cursive;
 }
