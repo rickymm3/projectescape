@@ -84,6 +84,11 @@ body {
   }
 }
 
+.dropdown-toggle:active, .open .dropdown-toggle {
+  color:black!important;
+}
+
+
 @media (max-width: 550px) {
   .map-marker {
     display:none;
