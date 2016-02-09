@@ -24,29 +24,31 @@
               %span.sr-only
           %li
             =link_to team_index_path do
-              Learn More
+              Escape Rooms?
               %span.sr-only
           %li.dropdown
             %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-              Corporate Events
+              Plan an Event!
+              %span.caret
+            %ul.dropdown-menu
+              %li
+                %a{:href => "#"} Corporate Team Building
+              %li.divider{:role => "separator"}
+              %li
+                %a{:href => "#"} Private Parties
+              %li
+                %a{:href => "#"} Birthday Parties
+              %li.divider{:role => "separator"}
+              %li
+                %a{:href => "#"} Everything Else!
         %ul.nav.navbar-nav.pull-right
+          %li
+            %a
+              #time
+                60:00
           %li
             =link_to "#" do
               %i.fa.fa-facebook
           %li
             =link_to "#" do
               %i.fa.fa-twitter
-            -#  %span.caret
-            -#%ul.dropdown-menu
-            -#  %li
-            -#    %a{:href => "#"} Action
-            -#  %li
-            -#    %a{:href => "#"} Another action
-            -#  %li
-            -#    %a{:href => "#"} Something else here
-            -#  %li.divider{:role => "separator"}
-            -#  %li
-            -#    %a{:href => "#"} Separated link
-            -#  %li.divider{:role => "separator"}
-            -#  %li
-            -#    %a{:href => "#"} One more separated link

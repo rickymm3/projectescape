@@ -14,7 +14,10 @@
       %br
       Consohocken PA, 19403
       %br
-      %i.fa.fa-mobile-phone.phone
-      610-405-2769
+    %i.fa.fa-mobile-phone.phone
+    %span.phone-number
+      ="610-405-2769 | "
+    =link_to("mailto:rickymm3@gmail.com") do
+      %i.fa.fa-envelope
   .book-now.navbar-btn.pull-right
     =link_to "Book Now!", bookings_path, class:'btn btn-success'

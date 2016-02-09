@@ -96,7 +96,7 @@ header {
 }
 
 .events {
-  background-color:#6e797c;
+  background-color:#586569;
   padding: 30px;
 }
 
@@ -179,6 +179,7 @@ pre {
 }
 
 .location {
+  color:white;
   display: inline-block;
   font-size: 14px!important;
   margin-bottom: 0px;
@@ -186,11 +187,7 @@ pre {
   font-family: 'Passion One', cursive;
   letter-spacing: 1px;
   a {
-    display: block;
     color: white;
-    font-weight:bolder;
-    -webkit-text-stroke-width: .02px;
-    -webkit-text-stroke-color: black;
   }
   a:hover {
     background-color: transparent;
@@ -198,7 +195,10 @@ pre {
     text-decoration: none;
   }
   .phone {
-    color: black;
+    color: white;
+  }
+  .phone-number {
+    color: #586569;
   }
 }
 
@@ -278,7 +278,7 @@ pre {
   color: #231f20;
 }
 .brand-escape {
-  color:#6e797c;
+  color:#586569;
 }
 .brand-text-small-image {
   float:left;
@@ -315,4 +315,11 @@ pre {
     margin-left: -50px;
     margin-top: -50px;
   }
+}
+
+#time {
+  font-size: 30px;
+  color: #EBBC4F;
+  background-color: #586569;
+  font-family: 'Iceland', cursive;
 }
