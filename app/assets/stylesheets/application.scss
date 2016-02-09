@@ -69,10 +69,6 @@ header {
 .info-image {
 //  background-image: image-url('repeating-bg.jpg');
 }
-.red {
-  float:left;
-  color:red;
-}
 
 .booking {
   padding-top:20px;
@@ -97,7 +93,7 @@ header {
 }
 
 .events {
-  background-color:#6e787b;
+  background-color:#231f20;
   padding: 30px;
 }
 
@@ -199,7 +195,7 @@ pre {
     color: white;
   }
   .phone-number {
-    color: #6e787b;
+    color: #231f20;
   }
 }
 
@@ -310,7 +306,6 @@ pre {
   margin: 0 auto;
   overflow:hidden;
   max-width: 500px;
-  height: 200px;
   border-radius: 20px;
   img {
     margin-left: -50px;

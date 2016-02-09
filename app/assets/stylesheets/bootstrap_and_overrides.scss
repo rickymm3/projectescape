@@ -11,12 +11,13 @@ body {
 
 }
 .navbar-default {
-  background-color: #6e787b;
+  background-color: #231f20;
+  height: auto !important;
   a {
     color: white!important;
   }
   a:hover {
-    color:#ffd724!important;
+    color:#ffcf63!important;
   }
 }
 
@@ -81,6 +82,9 @@ body {
   }
   .container > .pull-right {
     float: none!important;
+  }
+  .brand-project{
+    color:#6e787b!important;
   }
 }
 
