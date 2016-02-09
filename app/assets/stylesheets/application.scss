@@ -41,10 +41,10 @@ header {
 .top {
   padding-top: 10px;
   height: 105px;
-  background: #e3a912; /* Old browsers */
-  background: -moz-linear-gradient(top,  #e3a912 0%, #ebbc4f 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #e3a912 0%,#ebbc4f 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #e3a912 0%,#ebbc4f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: #ebbc4f; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ebbc4f 0%, #ebbc4f 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #ebbc4f 0%,#ebbc4f 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #ebbc4f 0%,#ebbc4f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaaf2e', endColorstr='#ebbc4f',GradientType=0 ); /* IE6-9 */
   border-bottom: 2px #e7e7e7 solid;
 }

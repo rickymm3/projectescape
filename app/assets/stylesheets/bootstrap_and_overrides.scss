@@ -16,7 +16,7 @@ body {
     color: white!important;
   }
   a:hover {
-    color:#ebbc4f!important;
+    color:#ffd724!important;
   }
 }
 
@@ -86,6 +86,9 @@ body {
 
 .dropdown-toggle:active, .open .dropdown-toggle {
   color:black!important;
+}
+.dropdown-toggle:active, .open .dropdown-toggle:hover {
+  color:#6e787b!important;
 }
 
 
