@@ -1,0 +1,52 @@
+%nav.navbar.navbar-default{role:'navigation'}
+  .container
+    .container-fluid
+      / Brand and toggle get grouped for better mobile display
+      .navbar-header
+        %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        .small-only
+          = link_to root_path, class: 'navbar-brand' do
+            .brand-text-small
+              .brand-text-small-image
+                =image_tag "pe-logo.png", size:'40x40'
+              .brand-text-small-text
+                =render "layouts/brand_text"
+      / Collect the nav links, forms, and other content for toggling
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        %ul.nav.navbar-nav
+          %li
+            =link_to about_index_path do
+              About Us
+              %span.sr-only
+          %li
+            =link_to team_index_path do
+              Learn More
+              %span.sr-only
+          %li.dropdown
+            %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              Corporate Events
+        %ul.nav.navbar-nav.pull-right
+          %li
+            =link_to "#" do
+              %i.fa.fa-facebook
+          %li
+            =link_to "#" do
+              %i.fa.fa-twitter
+            -#  %span.caret
+            -#%ul.dropdown-menu
+            -#  %li
+            -#    %a{:href => "#"} Action
+            -#  %li
+            -#    %a{:href => "#"} Another action
+            -#  %li
+            -#    %a{:href => "#"} Something else here
+            -#  %li.divider{:role => "separator"}
+            -#  %li
+            -#    %a{:href => "#"} Separated link
+            -#  %li.divider{:role => "separator"}
+            -#  %li
+            -#    %a{:href => "#"} One more separated link

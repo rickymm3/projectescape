@@ -1,0 +1,20 @@
+.pull-left
+  .brand-image-top
+    = link_to root_path, class: 'navbar-brand' do
+      =image_tag "pe-logo.png", size:'60x60'
+    %span.brand-text-top
+      =render "layouts/brand_text"
+.location-container.pull-right
+  .pull-left
+    =link_to "directions" do
+      %i.fa.fa-map-marker.maps
+  .location
+    =link_to "directions" do
+      1495 Alan Wood Rd.
+      %br
+      Consohocken PA, 19403
+      %br
+      %i.fa.fa-mobile-phone.phone
+      610-405-2769
+  .book-now.navbar-btn.pull-right
+    =link_to "Book Now!", bookings_path, class:'btn btn-success'

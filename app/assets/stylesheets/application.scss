@@ -28,16 +28,30 @@ body {
   color: #353131;
   font-family: 'Open Sans'!important;
   background-color: #fff/* nb*/;
-  padding-top: 40px;
 }
 
 header {
-  padding: 10px 10px 0px 10px;
-
+  padding: 0px;
   width: 100%;
   display:block;
 //  background-color: #2f465e
 }
+
+.top {
+  padding-top: 10px;
+  height: 105px;
+  background: #e3a912; /* Old browsers */
+  background: -moz-linear-gradient(top,  #e3a912 0%, #ebbc4f 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #e3a912 0%,#ebbc4f 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #e3a912 0%,#ebbc4f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaaf2e', endColorstr='#ebbc4f',GradientType=0 ); /* IE6-9 */
+  border-bottom: 2px #e7e7e7 solid;
+}
+
+.header-nav {
+  margin-top: -25px;
+}
+
 .logo {
   font-family: Arial;
   font-size: 25px;
@@ -82,7 +96,7 @@ header {
 }
 
 .events {
-  background-color:#55676A;
+  background-color:#6e797c;
   padding: 30px;
 }
 
@@ -165,17 +179,26 @@ pre {
 }
 
 .location {
-  font-size: 12px!important;
-  padding: 6px 10px 0px 7px;
+  display: inline-block;
+  font-size: 14px!important;
   margin-bottom: 0px;
+  margin-right: 10px;
+  font-family: 'Passion One', cursive;
+  letter-spacing: 1px;
   a {
     display: block;
-    color: #777;
+    color: white;
+    font-weight:bolder;
+    -webkit-text-stroke-width: .02px;
+    -webkit-text-stroke-color: black;
   }
   a:hover {
     background-color: transparent;
-    color: black;
+    color: #fff;
     text-decoration: none;
+  }
+  .phone {
+    color: black;
   }
 }
 
@@ -184,17 +207,23 @@ pre {
 }
 
 .map-marker {
-  height: 36px;
-  width: 36px;
-  margin-top: 8px;
+  margin-right: 10px;
+  height: 60px;
+  width: 60px;
+  margin-top: 2px;
+  opacity: 0.2;
   background-image: image-url('Google_Maps_Icon.png');
-  background-size: 36px 36px;
+  background-size: 60px 60px;
   background-repeat: no-repeat;
   a {
     display:block;
     width: 100%;
     height: 100%;
   }
+}
+
+.map-marker:hover {
+  opacity:1;
 }
 
 .google-maps {
@@ -211,6 +240,79 @@ pre {
   }
 }
 
+.location-container {
+  position:relative;
+  height: 60px;
+}
+
 .center {
   margin:auto;
+}
+
+.small-only {
+  display:none;
+}
+
+.book-now {
+  padding-top: 5px;
+}
+
+.brand-text-top {
+  margin-left: 5px;
+  font-size: 45px;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: -2px;
+}
+
+.brand-text-small {
+  margin-top: 5px;
+  margin-left: 5px;
+  font-size: 30px;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: -2px;
+  .brand-escape {
+    color: #EBBC4F;
+  }
+}
+.brand-project {
+  color: #231f20;
+}
+.brand-escape {
+  color:#6e797c;
+}
+.brand-text-small-image {
+  float:left;
+}
+.brand-text-small-text {
+  float:left;
+  margin-left: 10px;
+  margin-top: 12px;
+}
+
+.maps {
+  opacity: 1;
+  font-size: 50px!important;
+  color:white;
+  margin-top:5px;
+  margin-right: 10px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.maps:hover {
+  opacity: .8;
+}
+
+.banner {
+  margin-top: 20px!important;
+  float: none;
+  margin: 0 auto;
+  overflow:hidden;
+  max-width: 500px;
+  height: 200px;
+  border-radius: 20px;
+  img {
+    margin-left: -50px;
+    margin-top: -50px;
+  }
 }

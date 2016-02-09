@@ -7,6 +7,8 @@
     %title= content_for?(:title) ? yield(:title) : "Project Escape - #{@title}"
     = csrf_meta_tags
     = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"
+    %link{:href => "https://fonts.googleapis.com/css?family=Passion+One", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "https://fonts.googleapis.com/css?family=Fjalla+One", :rel => "stylesheet", :type => "text/css"}
     = stylesheet_link_tag "application", :media => "all"
     = javascript_include_tag "application"
     %link{:href => "//fonts.googleapis.com/css?family=Open+Sans", :rel => "stylesheet", :type => "text/css"}
@@ -14,8 +16,7 @@
     = yield :head
     %body
       %header
-        .container
-          =render "layouts/header"
+        =render "layouts/header"
       = bootstrap_flash
       = yield
     %footer
