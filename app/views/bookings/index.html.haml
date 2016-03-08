@@ -15,5 +15,17 @@
         %i.fa.fa-phone
         610-405-2769, and we can discuss
         scheduling you as one of our first events!
+
+
       -#%script{src:"https://bookeo.com/widget.js?a=41553LC3KLU1522774572F", async:true, defer:true}
-      -#%script{src:"https://embed.zapla.co/embed.js#account=732", async:true, defer:true}
+      -#%script{src:"https://bookeo.com/widget.js?a=41553LC3KLU1522774572F", async:true, defer:true}
+      %script{src:"https://embed.zapla.co/embed.js#account=732", async:true, defer:true}
+      -##bookify-wrapper
+      -#:javascript
+      -#  (function(d, s, id) {
+      -#  var js, fjs = d.getElementsByTagName(s)[0];
+      -#  if (d.getElementById(id)) return;
+      -#  js = d.createElement(s); js.id = id;
+      -#  js.src = "https://cliqboards.bookifyapp.com/integration/platform";
+      -#  fjs.parentNode.insertBefore(js, fjs);
+      -#  }(document, 'script', 'bookify-pi'));

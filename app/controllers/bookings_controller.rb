@@ -5,6 +5,8 @@ class BookingsController < ApplicationController
   # GET /bookings.json
   def index
     @bookings = Booking.all
+    @days_in_month = Time.days_in_month(Time.now.month, Time.now.year)
+    @current_day = Time.now
   end
 
   # GET /bookings/1
