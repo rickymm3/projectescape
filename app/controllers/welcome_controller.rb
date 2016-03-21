@@ -5,6 +5,6 @@ class WelcomeController < ApplicationController
   end
 
   def assign_title
-    @title = "Home"
+    @title = "The Best Escape Room In Philadelphia Area!"
   end
 end
