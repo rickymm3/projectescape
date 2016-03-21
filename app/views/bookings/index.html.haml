@@ -1,31 +1,42 @@
 .container
   .row
-    .col-lg-8.col-lg-offset-2.col-md-8.col-md-offset-2.col-sm-12
+    .col-lg-12.col-md-12.col-sm-12
       %h1.h1custom
         Schedule a Time
       %p
         Each Project Escape experience will last 1 hour.  Book now to ensure you get our desired time slot!
       %hr
       %p
-        We are not open yet!  We plan to launch in
-        %strong Late March
-        or
+        We are not open for bookings yet!  We plan to launch in
         %strong Early April.
-        However, if you would like to make an inquiry please call
+      %p
+        However, we are happy to discuss inquiries in regards to Corporate Team Building activities
+        in advance.
+      %p
+        Please call
         %i.fa.fa-phone
         610-405-2769, and we can discuss
         scheduling you as one of our first events!
+#bookify-wrapper
 
-
-      -#%script{src:"https://bookeo.com/widget.js?a=41553LC3KLU1522774572F", async:true, defer:true}
-      -#%script{src:"https://bookeo.com/widget.js?a=41553LC3KLU1522774572F", async:true, defer:true}
-      %script{src:"https://embed.zapla.co/embed.js#account=732", async:true, defer:true}
-      -##bookify-wrapper
-      -#:javascript
-      -#  (function(d, s, id) {
-      -#  var js, fjs = d.getElementsByTagName(s)[0];
-      -#  if (d.getElementById(id)) return;
-      -#  js = d.createElement(s); js.id = id;
-      -#  js.src = "https://cliqboards.bookifyapp.com/integration/platform";
-      -#  fjs.parentNode.insertBefore(js, fjs);
-      -#  }(document, 'script', 'bookify-pi'));
+:javascript
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://projectescape.bookifyapp.com/integration/platform";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'bookify-pi'));
+//
+//-#%script{src:"https://bookeo.com/widget.js?a=41553LC3KLU1522774572F", async:true, defer:true}
+//-#%script{src:"https://bookeo.com/widget.js?a=41553LC3KLU1522774572F", async:true, defer:true}
+//%script{src:"https://embed.zapla.co/embed.js#account=732", async:true, defer:true}
+//-##bookify-wrapper
+//-#:javascript
+//-#  (function(d, s, id) {
+//-#  var js, fjs = d.getElementsByTagName(s)[0];
+//-#  if (d.getElementById(id)) return;
+//-#  js = d.createElement(s); js.id = id;
+//-#  js.src = "https://cliqboards.bookifyapp.com/integration/platform";
+//-#  fjs.parentNode.insertBefore(js, fjs);
+//-#  }(document, 'script', 'bookify-pi'));

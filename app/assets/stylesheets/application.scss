@@ -119,7 +119,9 @@ header {
   }
 }
 
-
+.brand-image-top {
+  margin-left: 10px;
+}
 
 .info-image {
 }
@@ -270,12 +272,15 @@ pre {
   .brand-escape {
     color: #EBBC4F;
   }
+  .brand-project {
+    color: white!important;
+  }
 }
 .brand-project {
   color: #231f20;
 }
 .brand-escape {
-  color:#6e787b;
+  color:white;
 }
 .brand-text-small-image {
   float:left;

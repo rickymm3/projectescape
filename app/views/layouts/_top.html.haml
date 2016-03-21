@@ -1,7 +1,7 @@
 .pull-left
   .brand-image-top
     = link_to root_path, class: 'navbar-brand' do
-      =image_tag "pe-logo.png", size:'60x60'
+      =image_tag "pe-logo-black.png", size:'91x60'
     %span.brand-text-top
       =render "layouts/brand_text"
 .location-container.pull-right
@@ -17,7 +17,7 @@
     %i.fa.fa-mobile-phone.phone
     %span.phone-number
       ="484-535-3108 | "
-    =link_to("mailto:rickymm3@gmail.com") do
+    =link_to("mailto:bookings@projectescaperoom.com") do
       %i.fa.fa-envelope
   .book-now.navbar-btn.pull-right
-    =link_to "Book Now!", bookings_path, class:'btn btn-success'
+    =render 'layouts/bookings'
