@@ -79,8 +79,27 @@ header {
 .information {
   margin-top: 20px;
 }
-.what-is {
+
+.whitebg {
+  background-color: white;
+}
+
+.yellow {
+  color: #ebbc4f;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.black{
+  color: #231f20;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.center {
   text-align: center;
+}
+
+.what-is {
+  text-align: left;
   margin-bottom: 30px;
   p {
     letter-spacing: 1px;
@@ -268,7 +287,6 @@ pre {
   margin-left: 5px;
   font-size: 30px;
   font-family: 'Fjalla One', sans-serif;
-  letter-spacing: -2px;
   .brand-escape {
     color: #EBBC4F;
   }

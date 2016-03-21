@@ -1,18 +1,33 @@
+
 .container-fluid
+  .container
+    %br
+    %p.center.whitebg
+      Ready for a
+      %span.yellow
+        new
+      and
+      %span.yellow
+        unique 
+      experience! Get together with friends and book now for the
+      %span.black
+        best time out
+      in a long time!
   .row
-    .col-lg-6.col-md-6.col-sm-12.banner
+    .col-lg-12.col-md-12.col-sm-12.banner
       =image_tag "EscapeRoom_CS.jpg"
-  .row
-    .information.col-lg-6.col-md-6.col-sm-12.col-md-offset-3
-      .what-is
-        %hr
-        %p
-          Project Escape is for people of all ages and skill sets.  You do not
+  .container
+    .what-is
+      %hr
+      %p
+        %strong
+          The games are for people of skill sets.  You do not
           need to have any special knowledge to solve the puzzles and have a good time.
-          Just be creative and curious.
-        %br
-          Test your wit, and try to escape from our unique Escape Room, featuring
-          innovative and challenging puzzles, dynamic clues featuring professional
-          voice acting, and more!
+          Just be creative and curious, and have fun!
+      %hr
+      %p
+        Test your wit, and try to escape from our unique Escape Rooms, featuring
+        innovative and challenging puzzles, dynamic clues featuring professional
+        voice acting, and more!
 .events
   =render "events"
