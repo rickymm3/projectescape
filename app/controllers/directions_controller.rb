@@ -4,6 +4,7 @@ class DirectionsController < ApplicationController
   # GET /directions
   # GET /directions.json
   def index
+    @title = "Directions"
   end
 
   # GET /directions/1
