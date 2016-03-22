@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :corporates, :path => 'corporate'
+
   resources :bookings
   resources :about
   resources :team
