@@ -47,6 +47,24 @@
               %li.divider{:role => "separator"}
               %li
                 %a{:href => "#"} Have another idea?
+          %li.dropdown
+            %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              Info
+              %span.caret
+            %ul.dropdown-menu
+              %li
+                %a
+                  %i.fa.fa-phone
+                  484-535-3108
+              %li
+                =link_to("mailto:bookings@projectescaperoom.com") do
+                  %i.fa.fa-envelope
+                  Email Us
+              %li
+                =link_to "directions" do
+                  %i.fa.fa-map-marker
+                  Directions
+
         %ul.nav.navbar-nav.navbar-right
           %li.countdown
             %a
