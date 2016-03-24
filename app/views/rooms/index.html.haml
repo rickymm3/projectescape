@@ -1,19 +1,26 @@
 .container
-  %h1
-    The Heist of the Century
-  %p
-    You have been recruited by the infamous and renowned
-    theft ring, the
-    %strong Shrouded Hand,
-    and tasked with stealing one of the most famous diamonds in the world,
-    the
-    %strong Millennium Diamond!
-  %p
-    The mark?  Jimmy the Packrat - one of the head bosses of the Syndicate, a darker, more
-    ruthless theft ring.
-  %p
-    Break in, steal the diamond, then get out!  Be quick though, you only have an hour before
-    Jimmy and his goons get back!
-  %p
-    Are you up to the task?
-  =render 'layouts/bookings'
+  .row
+    .col-lg-12.col-md-12.col-sm-12.col-xs-12
+      %hr
+  .row
+    .col-lg-4.col-md-4.col-sm-6.col-xs-12.center
+      =image_tag ('heist-banner.png'),  style: 'width:100%;height:auto;max-width: 400px'
+    .col-lg-8.col-md-8.col-sm-6.col-xs-12
+      %h1.h1custom1
+        The Heist of the Century
+      %p
+        You have been recruited by the infamous and renowned
+        theft ring, the
+        %strong Shrouded Hand,
+        and tasked with stealing one of the most famous diamonds in the world,
+        the
+        %strong Millennium Diamond!
+      %p
+        The mark?  Jimmy the Packrat - one of the head bosses of the Syndicate, a darker, more
+        ruthless theft ring.
+      %p
+        Break in, steal the diamond, then get out!  Be quick though, you only have an hour before
+        Jimmy and his goons get back!
+      %p
+        Are you up to the task?
+      =render 'layouts/booknow_fullwidth'

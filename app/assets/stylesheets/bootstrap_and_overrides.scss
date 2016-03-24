@@ -107,6 +107,8 @@ body {
   }
 }
 
-@media (min-width: 768px) {
-
+@media (max-width: 992px) {
+  .countdown {
+    display:none!important;
+  }
 }
