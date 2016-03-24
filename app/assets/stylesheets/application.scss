@@ -328,7 +328,7 @@ pre {
   margin-top:5px;
   margin-right: 10px;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: #231f20;
 }
 
 .maps:hover {
@@ -346,6 +346,21 @@ pre {
   img {
     margin-left: -50px;
     margin-top: -100px;
+  }
+}
+
+.one-room-banner {
+  float: none;
+  margin: 0 auto;
+  overflow:hidden;
+  width: 240px;
+  height: auto;
+  border-radius: 5px;
+  background-color: blue;
+  img {
+    width: 260px;
+    height: auto;
+    margin-left: -20px;
   }
 }
 .time {
@@ -368,4 +383,13 @@ pre {
 .maxwidth-rooms {
   max-width: 400px;
   margin: auto;
+}
+
+.tightletters {
+  letter-spacing: -2px;
+}
+
+.textstroke {
+  -webkit-text-stroke-width: .2px;
+  -webkit-text-stroke-color: #231f20;
 }
