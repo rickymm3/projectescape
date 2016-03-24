@@ -94,8 +94,13 @@ body {
   color:#6e787b!important;
 }
 
-
-@media (max-width: 550px) {
+//sm screen
+@media (min-width: 767px) {
+  .bottom-margin {
+    margin-bottom: 0px!important;
+  }
+}
+@media (max-width: 768px) {
   .map-marker {
     display:none;
   }
@@ -107,6 +112,15 @@ body {
   }
 }
 
+@media (max-width: 375px) {
+  .brand-project {
+    font-size: 25px;
+  }
+  .brand-escape {
+    font-size: 25px;
+  }
+}
+//md screen
 @media (max-width: 992px) {
   .countdown {
     display:none!important;
