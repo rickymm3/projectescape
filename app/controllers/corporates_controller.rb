@@ -4,6 +4,7 @@ class CorporatesController < ApplicationController
   # GET /corporates
   # GET /corporates.json
   def index
+    @title = "Corporate Events!"
   end
 
   # GET /corporates/1
