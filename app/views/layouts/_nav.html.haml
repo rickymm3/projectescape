@@ -64,6 +64,10 @@
                 =link_to "directions" do
                   %i.fa.fa-map-marker
                   Directions
+              %li
+                %a.twitter-follow-button{"data-show-count" => "false", :href => "https://twitter.com/projectescapePA"} Follow @projectescapePA
+
+
 
         %ul.nav.navbar-nav.navbar-right
           %li.countdown
@@ -75,5 +79,8 @@
             =link_to "http://www.facebook.com/projectescaperoom/" do
               %i.fa.fa-facebook
           %li
-            =link_to "#" do
+            =link_to "https://twitter.com/projectescapePA" do
               %i.fa.fa-twitter
+
+:javascript
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
