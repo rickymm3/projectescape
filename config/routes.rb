@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :review
   resources :rooms
   root 'welcome#index'
+
 end

@@ -1,8 +1,7 @@
-
 .container-fluid
   .container
     %br
-    %p.center.whitebg
+    %p.center.whitebg{itemprop:"description"}
       Ready for a
       %span.yellow
         new
@@ -18,11 +17,17 @@
       %hr
         =render "welcome/excite_text"
       %hr
-      %p
+      %p{itemscope: true, itemtype:"http://schema.org/Service"}
+        %meta{itemprop:"serviceType", content:"Escape Room"}
         %strong
-          Project Escape has a strong commitment towards quality, and our rooms show it!  When you
-          join us, you and your friends will get to take part in an intricate plot with a myriad of
-          clever puzzles seamlessly woven together. This is an experience you won't stop talking about!
+          %span{itemprop:"name"}
+            Project Escape
+          is the most immersive Escape Room in the
+          Philadelphia area.
+          Our strong commitment towards quality and design offers you a ride you won't forget!
+          When you join us, you and your friends will get to take part in an intricate plot with a
+          myriad of clever puzzles seamlessly woven together. This is an experience you won't stop
+          talking about!
       %hr
       %p
         Both Experts and novice escape room fans will all have a great time joining the Bosses crew,
