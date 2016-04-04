@@ -110,11 +110,14 @@ body {
   .countdown{
     display:none!important;
   }
+  .twitter-hide {
+    display:none;
+  }
 }
 
 @media (max-width: 375px) {
   .brand-text-small-text {
-    font-size: 25px;
+    font-size: 20px;
 
   }
 

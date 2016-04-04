@@ -1,38 +1,44 @@
 .container-fluid
-  .container{itemscope:true, itemtype:"http://schema.org/LocalBusiness"}
-    %br
-    %p.center.whitebg{itemprop:"description"}
-      Ready for a
-      %span.yellow
-        new
-      and
-      %span.yellow
-        unique
-      experience! Get together with friends and book now for the
-      %span.black
-        best time out
-      in a long time!
-  .container
-    .what-is
-      %hr
-        =render "welcome/excite_text"
-      %hr
-      %p{itemscope: true, itemtype:"http://schema.org/Service"}
-        %meta{itemprop:"serviceType", content:"Escape Room"}
-        %strong
-          %span{itemprop:"name"}
-            Project Escape
-          is the most immersive Escape Room in the
-          Philadelphia area.
-          Our strong commitment towards quality and design offers you a ride you won't forget!
-          When you join us, you and your friends will get to take part in an intricate plot with a
-          myriad of clever puzzles seamlessly woven together. This is an experience you won't stop
-          talking about!
-      %hr
-      %p
-        Both Experts and novice escape room fans will all have a great time joining the Bosses crew,
-        and stealing back the elegant Millennium Diamond. Featuring professional
-        voice acting, and a series of dynamic puzzles, our first room is only the beginning in a line of
-        expertly crafted escape room games.  Book now to experience the phenomenon.
+  .container.body-padding
+    .row
+      .col-xs-12.col-sm-8.col-md-8.col-lg-8
+        %div{itemscope:true, itemtype:"http://schema.org/LocalBusiness"}
+          %br
+          %p.center.whitebg{itemprop:"description"}
+            Ready for a
+            %span.yellow
+              new
+            and
+            %span.yellow
+              unique
+            experience! Get together with friends and book now for the
+            %span.black
+              best time out
+            in a long time!
+        %div
+          .what-is
+            %hr
+              =render "welcome/excite_text"
+            %hr
+            %p{itemscope: true, itemtype:"http://schema.org/Service"}
+              %meta{itemprop:"serviceType", content:"Escape Room"}
+              %strong
+                %span{itemprop:"name"}
+                  Project Escape
+                is the most immersive Escape Room in the
+                Philadelphia area.
+                Our strong commitment towards quality and design offers you a ride you won't forget!
+                When you join us, you and your friends will get to take part in an intricate plot with a
+                myriad of clever puzzles seamlessly woven together. This is an experience you won't stop
+                talking about!
+            %hr
+            %p
+              Both Experts and novice escape room fans will all have a great time joining the Bosses crew,
+              and stealing back the elegant Millennium Diamond. Featuring professional
+              voice acting, and a series of dynamic puzzles, our first room is only the beginning in a line of
+              expertly crafted escape room games.  Book now to experience the phenomenon.
+      .twitter-hide.col-xs-12.col-sm-4.col-md-4.col-lg-4.border-right
+        %a.twitter-timeline{"data-widget-id" => "717107603227164672", :href => "https://twitter.com/projectescapePA"} Tweets by @projectescapePA
+
 .events
   =render "events"
