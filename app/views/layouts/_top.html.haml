@@ -2,8 +2,9 @@
   .brand-image-top
     = link_to root_path, class: 'navbar-brand' do
       =image_tag "pe-logo-black.png", size:'91x60'
-    %span.brand-text-top
-      =render "layouts/brand_text"
+    = link_to root_path, class: 'no-decoration' do
+      %span.brand-text-top
+        =render "layouts/brand_text"
 .location-container.pull-right
   .pull-left
     =link_to "directions" do

@@ -335,6 +335,10 @@ pre {
   -webkit-text-stroke-color: #231f20;
 }
 
+.no-decoration {
+  text-decoration: none!important;
+}
+
 .maps:hover {
   opacity: .8;
 }
