@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :bookings
   resources :about
   resources :directions
-  resources :review
+  resources :faq
   resources :rooms
   root 'welcome#index'
 
