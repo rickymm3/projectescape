@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
     @days_in_month = Time.days_in_month(Time.now.month, Time.now.year)
     @current_day = Time.now
-    @title = "Book Now!"
+    @title = "Book your Project Escape Adventure Now!"
   end
 
   # GET /bookings/1

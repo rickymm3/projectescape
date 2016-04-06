@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :default_title
 
   def default_title
-    @title = "Welcome!"
+    @title = "Project Escape, An Escape Room with finesse!"
   end
 
 end
