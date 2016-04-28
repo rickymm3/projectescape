@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :about
   resources :directions
   resources :faq
+  resources :busts
   resources :rooms
   root 'welcome#index'
 
