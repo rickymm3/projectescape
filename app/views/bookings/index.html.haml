@@ -17,6 +17,38 @@
         %i.fa.fa-phone
         484-535-3108, and we can discuss
         different packages.
+      %p.small-text
+        please allow 24 hours notice for partial refunds. click here for our
+        =link_to "refund policy", "", "data-target" => "#myModal", "data-toggle" => "modal"
+
+
+  / Button trigger modal
+  / Modal
+  #myModal.modal.fade{"aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+    .modal-dialog{:role => "document"}
+      .modal-content
+        .modal-header
+          %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+            %span{"aria-hidden" => "true"} ×
+          %h4#myModalLabel.modal-title Project Escape Refund Policy
+        .modal-body
+          %h3
+            %strong Cancellations:
+          %p
+            If for some reason you need to cancel, please call us at least 24 hours prior to your
+            scheduled booking time.  We can not provide a refund if you
+            %strong
+              do not
+            give us 24 hour notice!  In the event where you must cancel, we will allow a one time
+            courtesy rescheduling time if you call prior to your booking time.
+          %h3
+            %strong Rescheduling
+          %p
+            If for some reason you can not make it to your booking, we will allow you to reschedule.
+            Please call us at least 24 hours prior to reschedule.
+          %p
+            We want you to enjoy our room as much as we do! Please keep this refund policy in mind
+            while booking!  Thank you.
   #bookify-wrapper
 
 :javascript
