@@ -2,7 +2,7 @@
   .container.body-padding
     .row
       .col-xs-12.col-sm-8.col-md-8.col-lg-8
-        %div{itemscope:true, itemtype:"http://schema.org/LocalBusiness"}
+        %div
           %br
           %p.center.whitebg{itemprop:"description"}
             Ready for a
@@ -20,10 +20,9 @@
             %hr
               =render "welcome/excite_text"
             %hr
-            %p{itemscope: true, itemtype:"http://schema.org/Service"}
-              %meta{itemprop:"serviceType", content:"Escape Room"}
+            %p
               %strong
-                %span{itemprop:"name"}
+                %span
                   Project Escape
                 is the most immersive Escape Room in the
                 Philadelphia area.
@@ -45,12 +44,25 @@
 
 :javascript
   {
-    "@context": "http://schema.org",
-    "@type": "Place",
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "40.75",
-      "longitude": "73.98"
-    },
-    "name": "Empire State Building"
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Conshohocken",
+    "addressRegion": "PA",
+    "postalCode":"19428",
+    "streetAddress": "1495 Alan Wood Rd"},
+  "description": "An exciting live room escape experience in Conshohocken!",
+  "name": "Project Escape",
+  "telephone": "4845353108",
+  "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 10:00-20:00",
+  "url": "http://www.projectescaperoom.com",
+  "email":"mailto:bookings@projectescaperoom.com",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "40.099281",
+    "longitude": "-75.303361"},
+  "sameAs" : [
+    "http://www.facebook.com/projectescaperoom",
+    "http://www.twitter.com/projectescapePA"],
   }
