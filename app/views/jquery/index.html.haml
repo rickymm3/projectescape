@@ -1,0 +1,246 @@
+.whitetext
+
+  =form_tag("/jquery/clear_hint", method: 'post', remote:true) do
+    = label_tag 'Clear Hint'
+    %button{class:'btn btn-primary'}
+      %i.fa.fa-stop
+  =form_tag("/jquery/custom_message", method: 'post', remote:true) do
+    = label_tag 'Type Hint'
+    = text_field_tag :message, "", class:'black-text'
+    %button{class:'btn btn-primary'}
+      submit
+  =form_tag("/jquery/playfile", method: 'post', remote:true) do
+    = label_tag 'Custom'
+    = hidden_field_tag :message, "Play a custom sound ID"
+    = text_field_tag :id , "", class:"black-text"
+    =render 'layouts/play'
+
+  %h4
+    General
+    %ul
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'hints on the tv!'
+          = hidden_field_tag :id , 39
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Professional Rookies'
+          = hidden_field_tag :id , 3
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Look for some kind of lock(code)'
+          = hidden_field_tag :message, "Look for some kind of lock to use with that code you found"
+          = hidden_field_tag :id , 12
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Look for some kind of lock(key)'
+          = hidden_field_tag :message, "Look for some kind of lock to use with that key you found"
+          = hidden_field_tag :id , 18
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Did you look outside?'
+          = hidden_field_tag :message, "Check outside - Maybe you missed something?"
+          = hidden_field_tag :id , 16
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag '45 minutes'
+          = hidden_field_tag :id , 34
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag '30 minutes'
+          = hidden_field_tag :id , 35
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'slowing down?'
+          = hidden_field_tag :id , 36
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'im impressed!'
+          = hidden_field_tag :id , 37
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'last few minutes'
+          = hidden_field_tag :id , 38
+          =render 'layouts/play'
+  %h4
+    %p [courtyard]
+    Breaking into the house
+    %ul
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Make sure you read the mission summary - Boss said he’d add the code after it was typed up.'
+          = hidden_field_tag :id , 1
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Stop Messing around - Read the mission summary for the keypad code'
+          = hidden_field_tag :id , 2
+          =render 'layouts/play'
+  %h4
+    Crumpled Paper
+    %ul
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Look everywhere - He may have trashed something before he left'
+          = hidden_field_tag :message, "Look everywhere - He may have trashed something before he left"
+          = hidden_field_tag :id , 5
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Does that trash you found reference anything? A Journal, a Book?'
+          = hidden_field_tag :message, "Reread the trash you found - Does it reference anything?"
+          = hidden_field_tag :id , 6
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Enamels is a book...look out for it.'
+          = hidden_field_tag :message, "I looked over that sheet you found in the trash. 'Enamels' is a book."
+          = hidden_field_tag :id , 7
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'That page with the holes - its some kind of decoder'
+          = hidden_field_tag :message, "That page with the holes, its some kind of decoder"
+          = hidden_field_tag :id , 8
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Align the two papers'
+          = hidden_field_tag :message, "Align the two papers"
+          = hidden_field_tag :id , 9
+          =render 'layouts/play'
+  %h4
+    The Hole
+    %ul
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Theres something fishy about that flower garden'
+          = hidden_field_tag :message, "Theres something fishy about that flower garden"
+          = hidden_field_tag :id , 11
+          =render 'layouts/play'
+  %h4
+    The Brick Wall Message
+    %ul
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Unscramble the letters'
+          = hidden_field_tag :message, "Use the hooks on the wall to help unscramble the letters!"
+          = hidden_field_tag :id , 14
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'First two words are "Take Hold"'
+          = hidden_field_tag :message, "I figured out the first 2 words...'Take Hold'"
+          = hidden_field_tag :id , 15
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Look for a place where something burns'
+          = hidden_field_tag :message, "'Where ashes lie' .. Where do you burn things?"
+          = hidden_field_tag :id , 19
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'The fireplace - looks like its been tampered with.'
+          = hidden_field_tag :message, "The fireplace looks like its been tampered with."
+          = hidden_field_tag :id , 20
+          =render 'layouts/play'
+  %h4
+    Fountain
+    %ul
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Unsurfaced the fishing bob?'
+          = hidden_field_tag :message, "Maybe you un'surfaced' something with the valve"
+          = hidden_field_tag :id , 17
+          =render 'layouts/play'
+  %h4
+    Map + Journal
+    %ul
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'That journal, and the map, relate'
+          = hidden_field_tag :message, "The journal and the map are connected!"
+          = hidden_field_tag :id , 23
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Read through the journal'
+          = hidden_field_tag :message, "Read through the journal, carefully!"
+          = hidden_field_tag :id , 21
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Journal - Real Diamonds location'
+          = hidden_field_tag :message, "The journal is keeping track of the real diamonds location!"
+          = hidden_field_tag :id , 22
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Code on last page - lock in room'
+          = hidden_field_tag :message, "Does that code on the last page of the journal look like any lock in the room?"
+          = hidden_field_tag :id , 24
+          =render 'layouts/play'
+  %h4
+    Glasses and Screen
+    %ul
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Those Glasses Look suspicious'
+          = hidden_field_tag :message, "Try on the suspicious glasses"
+          = hidden_field_tag :id , 25
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Jukebox'
+          = hidden_field_tag :message, "The jukebox has an opening for records"
+          = hidden_field_tag :id , 26
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Coordinates'
+          = hidden_field_tag :message, "The coordinates on the screen..Maybe they aren't coordinates"
+          = hidden_field_tag :id , 27
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Coordinates are years'
+          = hidden_field_tag :message, "I think the coordinates are actually years"
+          = hidden_field_tag :id , 28
+          =render 'layouts/play'
+  %h4
+    Diamond Room
+    %ul
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'That map looks like the diamond room'
+          = hidden_field_tag :message, "That map looks like the Diamond room"
+          = hidden_field_tag :id , 29
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'The sundial looks out of place'
+          = hidden_field_tag :message, "That sundial ... it looks out of place"
+          = hidden_field_tag :id , 30
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'Theres a sundial, but no sun'
+          = hidden_field_tag :message, "A sundial with no sun?"
+          = hidden_field_tag :id , 31
+          =render 'layouts/play'
+      %li
+        =form_tag("/jquery/playfile", method: 'post', remote:true) do
+          = label_tag 'You got the diamond!'
+          = hidden_field_tag :id , 32
+          =render 'layouts/play'
+

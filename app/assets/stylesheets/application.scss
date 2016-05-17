@@ -426,3 +426,39 @@ pre {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+.whitetext {
+  color: white;
+  i {
+    color: black!important;
+  }
+}
+
+#time2 {
+  padding-left: 75px;
+  font-size: 350px;
+  text-align: left;
+  color: white!important;
+  font-family: 'impact';
+}
+
+.black-text {
+  color:black;
+}
+
+#hint-text {
+  width:1000px;
+  color: white;
+  margin-top: -75px;
+  font-size: 50px;
+}
+
+.background-countdown {
+  background-color: black!important;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.blackbody {
+  background-color: black;
+}

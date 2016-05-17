@@ -1,0 +1,58 @@
+.background-countdown
+  #start-game
+    = submit_tag 'Play', id: "start"
+  #time2
+    60:00
+  -##start-time
+  -#  =text_field_tag 'start-time-input', "60:00", id: "start-time-input"
+
+  #hint-text.white-text
+
+:javascript
+
+  function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    var countdown = setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          $('#start').show()
+          $('#start-time').show()
+          clearInterval(countdown)
+        }
+    }, 1000);
+  }
+  function countdown_start() {
+    $(document).ready(function () {
+      var sixtyMinutes =  3600,
+      display = document.querySelector('#time2');
+      startTimer(sixtyMinutes, display);
+    });
+  }
+
+  $('#start').click(function() {
+    countdown_start()
+    $('#start').hide()
+    event.preventDefault();
+  });
+
+  function get_text(){
+    $('#log_complete').append('<li>get_fb() ran</li>');
+    var feedback = $.ajax({
+      type: "POST",
+      url: "jquery/update_text",
+      async: false
+    }).complete(function(){
+      setTimeout(function(){get_text();}, 1000);
+    }).responseText;
+  }
+
+  $(function(){
+    get_text();
+  });
