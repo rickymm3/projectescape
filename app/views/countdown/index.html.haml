@@ -46,7 +46,7 @@
     $('#log_complete').append('<li>get_fb() ran</li>');
     var feedback = $.ajax({
       type: "POST",
-      url: "jquery/update_text",
+      url: "update_text",
       async: false
     }).complete(function(){
       setTimeout(function(){get_text();}, 1000);

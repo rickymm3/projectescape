@@ -1,12 +1,11 @@
 class JqueryController < ApplicationController
   def playfile
     require 'json'
-    HTTParty.get("http://192.168.1.161:5000/play/98")
-
-    response = HTTParty.get("http://192.168.1.161:5000/play/#{params[:id]}")
-    parsed = JSON.parse(response)
     @message = params[:message]
     Hint.first.update_attributes(message:@message)
+    HTTParty.get("http://192.168.1.161:5000/play/98")
+    response = HTTParty.get("http://192.168.1.161:5000/play/#{params[:id]}")
+    parsed = JSON.parse(response)
     if parsed['success'] == true
       @success = "Success"
     else
