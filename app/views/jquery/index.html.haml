@@ -1,10 +1,10 @@
 .whitetext
 
-  =form_tag("clear_hint", method: 'post', remote:true) do
+  =form_tag("jquery/clear_hint", method: 'post', remote:true) do
     = label_tag 'Clear Hint'
     %button{class:'btn btn-primary'}
       %i.fa.fa-stop
-  =form_tag("custom_message", method: 'post', remote:true) do
+  =form_tag("jquery/custom_message", method: 'post', remote:true) do
     = label_tag 'Type Hint'
     = text_field_tag :message, "", class:'black-text'
     %button{class:'btn btn-primary'}
