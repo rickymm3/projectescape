@@ -18,17 +18,29 @@
 %br
 %br
 
-.center{}
-  .flip
-    =image_tag("compass.png",size:"400x400")
-    %p
+.center
+  .flipx
+    .center.compass
+      .compass-text
+        1 = S  |  2 = NW  |  3 = W  |  4 = NE
       %br
-      The signs tell me the way to face.
-    %p
-      =image_tag("runes.png", size:"350x175")
-
-.center.flip
-
+      =image_tag("compass.png",size:"300x300")
+      .compass-text
+        5 = E  |  6 = SW  |  7 = N  |  8 = SE
+      %br
+    .runes.center
+      .floatleft
+        =image_tag("mike-rune.png", size: "125x125")
+        %p
+          14.75-15.64
+      .floatleft
+        =image_tag("leo-rune.png", size: "125x125")
+        %p
+          14.52-15.19
+      .floatleft
+        =image_tag("raph-rune.png", size: "125x125")
+        %p
+          14.83-15.20
 %br
 %br
 %br
