@@ -16,6 +16,10 @@
               best time out
             in a long time at Project Escape in Conshohocken!
         %div
+          %br
+          .video.center
+            %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/WRnCZsKCw2k", :width => "560"}
+
           .what-is
             %hr
               =render "welcome/excite_text"
@@ -38,7 +42,6 @@
               expertly crafted escape room games.  Book now to experience the phenomenon.
       .twitter-hide.col-xs-12.col-sm-4.col-md-4.col-lg-4.border-right
         %a.twitter-timeline{"data-widget-id" => "717107603227164672", :href => "https://twitter.com/projectescapePA"} Tweets by @projectescapePA
-
 .events
   =render "events"
 
