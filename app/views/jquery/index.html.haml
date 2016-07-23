@@ -16,7 +16,7 @@
     =render 'layouts/play'
   %h4
     Link test
-    =link_to "test", "http://192.168.1.161:5000/play/98", remote:true
+    =link_to "test", "http://192.168.1.161:5000/play/98", remote:true, message:"testing"
   %h4
     General
     %ul
@@ -246,3 +246,17 @@
           = hidden_field_tag :id , 32
           =render 'layouts/play'
 
+:javascript
+  $(document).on("click", "a", function(){
+    var data = {"message: $(this).attr('message')"};
+    $.ajax({
+      type: "POST",
+      url: "jquery/playfile",
+      data: data,
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function() {
+        alert('updated');
+      }
+    });
+  });

@@ -18,7 +18,7 @@ class JqueryController < ApplicationController
   end
 
   def update_text
-    @message = Hint.first.message
+    Hint.first.update_attributes(params[:message])
   end
 
   def custom_message
