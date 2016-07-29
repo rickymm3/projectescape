@@ -15,10 +15,7 @@
     = text_field_tag :id , "", class:"black-text"
     =render 'layouts/play'
   %h4
-    Link test
-
     =link_to "attention", "http://192.168.1.161:5000/play/98", remote:true, class: "message"
-
   %h4
     General
     %ul
@@ -42,17 +39,25 @@
         =link_to "Im Impressed", "http://192.168.1.161:5000/play/37", remote:true, class: "message"
       %li
         =link_to "Vipers right around the corner", "http://192.168.1.161:5000/play/38", remote:true, class: "message"
-  %h5 [text hints only]
-    %p Use these just for text
+  %h5
+    %p [text hints only]
+
     %ul
       %li
         =link_to "I can hack the Vipers GPS and buy you some extra time!", "http://192.168.1.161:5000/play/98", remote:true, class: "message", message:"I can hack the Vipers GPS and buy you some extra time!"
+      %li
         =link_to "Our spies found an interesting symbol outside...Have you seen it?", "http://192.168.1.161:5000/play/98",  message:"Our spies found an interesting symbol outside...Have you seen it?", remote:true, class: "message"
+      %li
         =link_to "After you get the order, you'll need the orientation", "http://192.168.1.161:5000/play/98",  message:"After you get the order, you'll need the orientation .. I bet those symbols will help with that.", remote:true, class: "message"
+      %li
         =link_to "The busts...they can be arranged in an order, and orientated in 8 different directions!", "http://192.168.1.161:5000/play/98",  message:"The busts...they can be arranged in an order, and orientated in 8 different directions!", remote:true, class: "message"
+      %li
         =link_to "The Green Mirror Pg 4? ... It looks like it was just recently written!", "http://192.168.1.161:5000/play/98",  message:"The Green Mirror Pg 4? ... It looks like it was just recently written!", remote:true, class: "message"
+      %li
         =link_to "I heard the Viper has a rat problem ... They were chewing holes through the brick walls ... gross", "http://192.168.1.161:5000/play/98",  message:"I heard the Viper has a rat problem ... They were chewing holes through the brick walls ... gross", remote:true, class: "message"
+      %li
         =link_to "The paper says, 'inside the walls.'  Is there some kind of tool you can use to look inside the walls? ", "http://192.168.1.161:5000/play/98",  message:"The paper says, 'inside the walls.'  Is there some kind of tool you can use to look inside the walls?", remote:true, class: "message"
+      %li
         =link_to "Those objects in the holes ... i swear i saw them somewhere else as well", "http://192.168.1.161:5000/play/98",  message:"Those objects in the holes ... i swear i saw them somewhere else as well", remote:true, class: "message"
 
   %h4
@@ -142,5 +147,4 @@
        alert('successfully');
       }
     });
-    }
   });
