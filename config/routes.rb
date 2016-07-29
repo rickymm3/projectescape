@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       post :update_text
       post :clear_hint
       post :custom_message
+      post :testing
     end
   end
 
