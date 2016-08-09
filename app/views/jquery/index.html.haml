@@ -9,13 +9,8 @@
     = text_field_tag :message, "", class:'black-text'
     %button{class:'btn btn-primary'}
       submit
-  =form_tag("jquery/playfile", method: 'post', remote:true) do
-    = label_tag 'Custom'
-    = hidden_field_tag :message, "Play a custom sound ID"
-    = text_field_tag :id , "", class:"black-text"
-    =render 'layouts/play'
   %h4
-    =link_to "attention", "http://192.168.1.161:5000/play/98", remote:true, class: "message"
+    =link_to "<------ATTENTION!------>", "http://192.168.1.161:5000/play/98", remote:true, class: "message"
   %h4
     General
     %ul

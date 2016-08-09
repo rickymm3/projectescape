@@ -1,7 +1,7 @@
 class JqueryController < ApplicationController
 
   def playfile
-    @message = params[:message]
+    @message = params[:message] if params[:message]
     Hint.first.update_attributes(message:@message)
   end
 

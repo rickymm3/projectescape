@@ -2,13 +2,18 @@
   #start-game
     = submit_tag 'Play', id: "start"
   #time2
-    60:00
+    =@timer + ":00"
   -##start-time
   -#  =text_field_tag 'start-time-input', "60:00", id: "start-time-input"
 
   #hint-text.white-text
+  #findtime{ "data-timer" => @timer}
+
 
 :javascript
+
+  var thetime = $("#findtime").data("timer");
+
 
   function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
@@ -30,8 +35,7 @@
   }
   function countdown_start() {
     $(document).ready(function () {
-      var sixtyMinutes = 60*60,
-
+      var sixtyMinutes = thetime*60,
       display = document.querySelector('#time2');
       startTimer(sixtyMinutes, display);
     });
@@ -47,7 +51,7 @@
     $('#log_complete').append('<li>get_fb() ran</li>');
     var feedback = $.ajax({
       type: "POST",
-      url: "/jquery/update_text",
+      url: "jquery/update_text",
       async: false
     }).complete(function(){
       setTimeout(function(){get_text();}, 1000);

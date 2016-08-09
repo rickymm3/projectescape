@@ -20,5 +20,9 @@ Rails.application.routes.draw do
   end
 
   resources :countdown
+  resources :countdown1
+  resources :countdown2
+  resources :countdown10
+  resources :countdown15
 
 end
