@@ -34,23 +34,27 @@
         =link_to "Im Impressed", "http://192.168.1.161:5000/play/37", remote:true
       %li
         =link_to "Vipers right around the corner", "http://192.168.1.161:5000/play/38", remote:true
-  %h5
-    %p [text hints only]
-    %ul
-      %li
-        - @texthints.each do |texthint|
-          = link_to texthint.message, "http://192.168.1.161:5000/play/98", remote:true, class: "message", message: texthint.message
-          = link_to 'Show', texthint
-          = link_to 'Edit', edit_texthint_path(texthint)
-          = link_to 'Destroy', texthint, :method => :delete, :data => { :confirm => 'Are you sure?' }
+  %h5{style:"border:solid 1px white"}
+    %p Dynamic text hints
+    %table
+      %th
+        %tr
+          %th Message
+          %th
+          %th
 
+      %tbody
+        - @texthints.each do |texthint|
+          %tr
+            %td= link_to texthint.message, "http://192.168.1.161:5000/play/98", remote:true, class: "message", message: texthint.message
+            %td= link_to 'Edit', edit_texthint_path(texthint), class:"btn btn-info"
+            %td= link_to 'X', texthint, :method => :delete, :data => { :confirm => 'Are you sure?' }, class:"btn btn-danger"
       %br
 
-      = link_to 'New Texthint', new_texthint_path
+    = link_to 'New Hint (must refresh page)', new_texthint_path, class:"btn btn-warning"
 
+    %h3 Static Text Hints
     %ul
-      %li
-        =link_to "", "http://192.168.1.161:5000/play/98", remote:true, class: "message", message:""
       %li
         =link_to "Our spies found an interesting symbol outside...Have you seen it?", "http://192.168.1.161:5000/play/98",  message:"Our spies found an interesting symbol outside...Have you seen it?", remote:true, class: "message"
       %li
