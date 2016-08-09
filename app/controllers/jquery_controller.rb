@@ -19,6 +19,7 @@ class JqueryController < ApplicationController
   end
 
   def index
+    @texthints = Texthint.all
     render layout: "countdown"
   end
 end
