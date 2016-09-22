@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :busts
   resources :rooms
   root 'welcome#index'
+  resources :parties
 
   resources :jquery do
     collection do
