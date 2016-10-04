@@ -1,3 +1,10 @@
+%nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    =link_to "<------ATTENTION!------>", "http://192.168.1.161:5000/play/98", remote:true, class:"btn btn-danger"
+
+%br
+%br
+%br
 .whitetext
   =link_to "countdown timer", countdown_index_path(timer:60)
   =form_tag("jquery/clear_hint", method: 'post', remote:true) do
@@ -143,6 +150,7 @@
         =link_to "That sundial ... it looks out of place", "http://192.168.1.161:5000/play/30", message:"That sundial ... it looks out of place", remote:true, class: "message"
       %li
         =link_to "A sundial with no sun?", "http://192.168.1.161:5000/play/31", message:"A sundial with no sun?", remote:true, class: "message"
+
 
 :javascript
 
