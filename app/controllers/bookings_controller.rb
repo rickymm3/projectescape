@@ -8,6 +8,7 @@ class BookingsController < ApplicationController
     @days_in_month = Time.days_in_month(Time.now.month, Time.now.year)
     @current_day = Time.now
     @title = "Book your Project Escape Adventure Now!"
+    @full_width_css = "full-width"
   end
 
   # GET /bookings/1
