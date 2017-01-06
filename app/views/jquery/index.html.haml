@@ -150,12 +150,18 @@
       %li
         =link_to "That map looks like the Diamond room", "http://192.168.1.161:5000/play/29", message:"That map looks like the Diamond room", remote:true, class: "message"
       %li
-        =link_to "That sundial ... it looks out of place", "http://192.168.1.161:5000/play/30", message:"That sundial ... it looks out of place", remote:true, class: "message"
-      %li
         =link_to "A sundial with no sun?", "http://192.168.1.161:5000/play/31", message:"A sundial with no sun?", remote:true, class: "message"
+      %li
+        =link_to "That sundial ... it looks out of place", "http://192.168.1.161:5000/play/30", message:"That sundial ... it looks out of place", remote:true, class: "message"
+  %h4
+    Misc
+    %ul
+      %li
+        =link_to "Laugh Track", "http://192.168.1.161:5000/play/97", remote:true, class: "message"
 
 
-:javascript
+
+    :javascript
 
   $('.message').on('click', function() {
     var data = {"message" : $(this).attr('message')};

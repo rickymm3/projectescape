@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :default_title
 
   def default_title
-    @title = "Project Escape, An Escape Room with finesse!"
+    @title = "Project Escape, Conshohocken's Escape Room"
     @full_width_css = ""
 
   end
