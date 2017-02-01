@@ -1,27 +1,39 @@
 .container
   .row
     .col-lg-12.col-md-12.col-sm-12
-      %h1.h1custom
-        Schedule a Time
-      %p
-        Each Project Escape experience will last 1 hour.  Book now to ensure you get your desired time slot!
-      %p
-        Our room is built to accommodate up to 10 players.  If your group has less than 8,
-        you may be paired with other players who will fill the empty spaces.
-      %p
-        If no one else books these spaces, you will play the game with only your group!  Keep in mind,
-        the only way to ensure you have a private group is to bring 7 other friends!
-      %hr
-        =render "layouts/bookings"
-      %hr
-      %p
-        We are offering private events! Please call
-        %i.fa.fa-phone
-        484-535-3108, and we can discuss
-        different packages.
-      %p
-        Project Escape is built for adults, however, youngsters have been very successful in our room.  If you decide to bring children, we require
-        supervision inside the room.
+      %h2
+        %b So, you're ready to book!
+        %p
+          %i Here are a few things you should know
+      %h3
+        %b What exactly should you expect?
+      %p.indent
+        Each Project Escape experience will last
+        %b 1 hour.
+        Put on your thinking caps, and bring only your wits and imagination!
+        You'll enter a mysterious room, it's up to you to figure out what to do next, we don't want to ruin the surprise!
+      %p.indent Book now to ensure you get your desired time slot!
+      %p.indent
+        %b
+          %small
+            *Keep in mind, the only way to ensure you have a private group book the entire room!
+      %h3
+        %b Decide who you want to bring!
+      %p.indent
+        Project Escape is a TEAM experience.  Get together your brightest group of friends (or the funnest!), and get ready for a
+        brand new type of live cooperative gaming experience!
+      %h3
+        %b Project Escape is fun for all ages!
+      %p.indent
+        Our Escape Rooms are said to be quite difficult, however we offer a dynamic difficulty curve that allows
+        all age groups to have fun.  We've found that children ages 12 and up can contribute to the puzzles, while
+        younger children love the overall look and feel of the room, and always surprise the older crowd by thinking outside the box!
+      %p.indent
+        %b *All minors (under 18) require adult supervision inside the room.
+      %h3
+        %b Now it's time to choose a room!
+      %script{:src => "https://fareharbor.com/embeds/script/items/projectescaperoom/?selected-items=29560,40420&fallback=simple"}      -#=image_tag("heist-banner.png", class:'bookimages', size: '250x250')
+      -#=image_tag("banner-small.png", class:'bookimages', size: '250x250')
       %h3
         %b So you've booked! Awesome! What now?
         %br
