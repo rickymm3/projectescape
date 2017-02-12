@@ -12,7 +12,17 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :parties
 
-  resources :jquery do
+  resources :heist do
+    collection do
+      post :playfile
+      post :update_text
+      post :clear_hint
+      post :custom_message
+      post :testing
+    end
+  end
+
+  resources :wizard do
     collection do
       post :playfile
       post :update_text
@@ -23,5 +33,6 @@ Rails.application.routes.draw do
   end
 
   resources :countdown
+  resources :wizardcountdown
   resources :leaderboard
 end

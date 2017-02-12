@@ -50,7 +50,7 @@
     $('#log_complete').append('<li>get_fb() ran</li>');
     var feedback = $.ajax({
       type: "POST",
-      url: "heist/update_text",
+      url: "wizard/update_text",
       async: false
     }).complete(function(){
       setTimeout(function(){get_text();}, 1000);

@@ -1,4 +1,4 @@
-class JqueryController < ApplicationController
+class HeistController < ApplicationController
 
   def playfile
     @message = params[:message] if params[:message]
