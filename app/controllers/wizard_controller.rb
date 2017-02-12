@@ -19,7 +19,7 @@ class WizardController < ApplicationController
   end
 
   def index
-    @texthints = Texthint.all
+    @texthint2s = Texthint2.all
     render layout: "countdown"
   end
 end

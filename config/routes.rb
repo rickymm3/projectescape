@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :texthint2s
+
   resources :texthints
 
   resources :corporates, :path => 'corporate'

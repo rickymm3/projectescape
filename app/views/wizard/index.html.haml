@@ -20,8 +20,25 @@
       submit
   %h4
     =link_to "<------ATTENTION!------>", "http://192.168.1.161:5000/play/96", remote:true, class:"btn btn-danger"
-  %h4
-    General
+  %h5{style:"border:solid 1px white"}
+    %p Dynamic text hints
+    %table
+      %th
+        %tr
+          %th Message
+          %th
+          %th
+
+      %tbody
+        - @texthint2s.each do |texthint2|
+          %tr
+            %td= link_to texthint2.message, "http://192.168.1.161:5000/play/96", remote:true, class: "message", message: texthint2.message
+            %td= link_to 'Edit', edit_texthint2_path(texthint2), class:"btn btn-info"
+            %td= link_to 'X', texthint2, :method => :delete, :data => { :confirm => 'Are you sure?' }, class:"btn btn-danger"
+      %br
+
+    = link_to 'New Hint (must refresh page)', new_texthint2_path, class:"btn btn-warning"
+
 
 
 :javascript
