@@ -1,0 +1,23 @@
+%table.timekeeper
+  %tbody
+    %tr.white
+      %td Room
+      %td Active
+      %td Start/Stop
+      %td Time
+      %td pause
+    %tr
+      %td.white
+        =tk.room.capitalize
+      %td
+        -if tk.room == "wizard"
+          #wizardisrunning
+        -if tk.room == "heist"
+          #heistisrunning
+      %td
+        #startstop
+          =render "countdown/startstop", tk: tk
+      %td
+        %span#ctime1
+      %td
+        =render "layouts/pause", tk:tk
