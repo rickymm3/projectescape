@@ -506,3 +506,22 @@ img.bookimages {
 .indent {
   padding-left: 10px;
 }
+
+.timekeeper tr, .left {
+  border: 1px solid red;
+}
+.greenfont {
+  color: green!important;
+}
+.redfont {
+  color: red!important;
+}
+
+.price {
+  position: relative;
+  top: -5px;
+  font-size: 50px;
+  color: white!important;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: #231f20;
+}

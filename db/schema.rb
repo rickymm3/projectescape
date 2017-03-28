@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170212184023) do
+ActiveRecord::Schema.define(version: 20170224174258) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20170212184023) do
     t.string   "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "room"
   end
 
   create_table "texthint2s", force: true do |t|
@@ -43,6 +44,15 @@ ActiveRecord::Schema.define(version: 20170212184023) do
     t.string   "message"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "timekeepers", force: true do |t|
+    t.string   "room"
+    t.datetime "start"
+    t.datetime "end"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "pause"
   end
 
 end

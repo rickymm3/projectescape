@@ -33,8 +33,15 @@ Rails.application.routes.draw do
       post :testing
     end
   end
-
-  resources :countdown
+  resources :countdown do
+    collection do
+      post :checkrunning
+      post :starttimer
+      post :pause
+      post :addtime
+    end
+  end
+  resources :heistcountdown
   resources :wizardcountdown
   resources :leaderboard
 end

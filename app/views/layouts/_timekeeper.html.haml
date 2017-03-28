@@ -5,7 +5,7 @@
       %td Active
       %td Start/Stop
       %td Time
-      %td pause
+      %td Adjust
     %tr
       %td.white
         =tk.room.capitalize
@@ -20,4 +20,8 @@
       %td
         %span#ctime1
       %td
-        =render "layouts/pause", tk:tk
+        =form_tag(addtime_countdown_index_path(tk:tk), method: 'post', remote:true) do
+          = label_tag 'Time+/-'
+          = number_field_tag :astime, "", class:'black-text smallinput'
+          %button{class:'btn btn-primary'}
+            +/-

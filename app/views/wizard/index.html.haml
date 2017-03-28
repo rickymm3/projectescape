@@ -1,14 +1,16 @@
 %nav.navbar.navbar-default.navbar-fixed-top
   .container
-    =link_to "<------ATTENTION!------>", "http://192.168.1.161:5000/play/96", remote:true, class:"btn btn-danger"
+    =link_to "<------ATTENTION!------>", "http://192.168.1.10:5000/play/96", remote:true, class:"btn btn-danger"
 
 %br
 %br
 %br
+#timekeeper
+  =render "layouts/timekeeper", tk:@wizard
 .whitetext
   %h1
     Wizard's Secret Room
-  =link_to "countdown timer", wizardcountdown_index_path(timer:60)
+  =link_to "countdown timer", wizardcountdown_index_path
   =form_tag("wizard/clear_hint", method: 'post', remote:true) do
     = label_tag 'Clear Hint'
     %button{class:'btn btn-primary'}
@@ -19,7 +21,7 @@
     %button{class:'btn btn-primary'}
       submit
   %h4
-    =link_to "<------ATTENTION!------>", "http://192.168.1.161:5000/play/96", remote:true, class:"btn btn-danger"
+    =link_to "<------ATTENTION!------>", "http://192.168.1.10:5000/play/96", remote:true, class:"btn btn-danger"
   %h5{style:"border:solid 1px white"}
     %p Dynamic text hints
     %table
@@ -32,16 +34,83 @@
       %tbody
         - @texthint2s.each do |texthint2|
           %tr
-            %td= link_to texthint2.message, "http://192.168.1.161:5000/play/96", remote:true, class: "message", message: texthint2.message
+            %td= link_to texthint2.message, "http://192.168.1.10:5000/play/96", remote:true, class: "message", message: texthint2.message
             %td= link_to 'Edit', edit_texthint2_path(texthint2), class:"btn btn-info"
             %td= link_to 'X', texthint2, :method => :delete, :data => { :confirm => 'Are you sure?' }, class:"btn btn-danger"
       %br
 
     = link_to 'New Hint (must refresh page)', new_texthint2_path, class:"btn btn-warning"
-
+  %ul
+    %li
+      =link_to "Intro - Play at start of game!", "http://192.168.1.10:5000/play/1",  message:"", remote:true, class: "message"
+    %li
+      =link_to "Look closely on the wall outside the cell - arms reach", "http://192.168.1.10:5000/play/2", message: "", remote:true, class: "message"
+    %li
+      =link_to "Note looks enchanted!", "http://192.168.1.10:5000/play/4", message: "", remote:true, class: "message"
+    %li
+      =link_to "I believe the previous inmate figured out the code to that lock", "http://192.168.1.10:5000/play/6", message: "", remote:true, class: "message"
+    %li
+      =link_to "", "http://192.168.1.10:5000/play/", message: "", remote:true, class: "message"
+    %li
+      =link_to "You found my secret room!", "http://192.168.1.10:5000/play/11", message: "You found my secret room! Find a way to release the chains! Use my 3 magical items!", remote:true, class: "message"
+    %li
+      =link_to "When working together - palms", "http://192.168.1.10:5000/play/12", message: "When working together some muggles can channel strong power through their palms!", remote:true, class: "message"
+    %li
+      =link_to "Use the magical symbol in the potion room", "http://192.168.1.10:5000/play/18", message: "Use the magical symbol in the potion room to test each potion. Listen carefully!", remote:true, class: "message"
+    %li
+      =link_to "No No No! One at a time", "http://192.168.1.10:5000/play/19", message: "Try only one potion at a time!", remote:true, class: "message"
+    %li
+      =link_to "The magical symbol is outside the potion room", "http://192.168.1.10:5000/play/20", message: "I marked the same magical symbol outside the potion room as well!", remote:true, class: "message"
+    %li
+      =link_to "You solved the chess game", "http://192.168.1.10:5000/play/21", message: "You solved my game of Wizardings Chess! Where did that noise come from?", remote:true, class: "message"
+    %li
+      =link_to "I wrote about the chess game in my journal", "http://192.168.1.10:5000/play/22", message: "I wrote about the ending of the chess game in my journal", remote:true, class: "message"
+    %li
+      =link_to "I used the wanted posters", "http://192.168.1.10:5000/play/26", message: "I used the wanted posters in the dungeon to finish my notes", remote:true, class: "message"
+    %li
+      =link_to "The guards are almost back", "http://192.168.1.10:5000/play/34", message: "", remote:true, class: "message"
+    %li
+      =link_to "You win!", "http://192.168.1.10:5000/play/37", message: "", remote:true, class: "message"
+    %li
+      =link_to "You found the three magical items!!", "http://192.168.1.10:5000/play/32", message: "", remote:true, class: "message"
+    %li
+      =link_to "Painting Commisioned!!", "http://192.168.1.10:5000/play/23", message: "", remote:true, class: "message"
 
 
 :javascript
+  window.onload = function() {
+
+    //check if game is running
+    function check_if_running(){
+      var feedback = $.ajax({
+        type: "POST",
+        url: "countdown/checkrunning",
+        data: {
+          "room": "wizard"
+        },
+        async: false
+      }).complete(function(){
+        setTimeout(function(){check_if_running();}, 5000);
+      }).responseText;
+    }
+
+    $(function(){
+      check_if_running();
+    });
+
+    //timer code
+    var display1 = document.querySelector('#ctime1'),
+        timer = new CountDownTimer(#{@wizard.end - Time.now});
+
+    timer.onTick(format1).start();
+
+    function format1(minutes, seconds) {
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+      display1.textContent = minutes + ':' + seconds;
+    }
+
+  };
 
   $('.message').on('click', function() {
     var data = {"message" : $(this).attr('message')};

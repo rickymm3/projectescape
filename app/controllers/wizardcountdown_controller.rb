@@ -1,6 +1,6 @@
 class WizardcountdownController < ApplicationController
   def index
-    @timer = params[:timer]
+    @wizard = Timekeeper.where(room:"wizard").first
     render layout: "countdown"
     @message = ""
   end

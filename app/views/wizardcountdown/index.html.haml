@@ -1,62 +1,90 @@
 .background-countdown
   #start-game
-    = submit_tag 'Play', id: "start"
-  #time2
-    =@timer + ":00"
-  -##start-time
-  -#  =text_field_tag 'start-time-input', "60:00", id: "start-time-input"
-
+  %span#time2
   #hint-text.white-text
     #findtime{ "data-timer" => @timer}
 
 :javascript
+  window.onload = function() {
 
-  var thetime = $("#findtime").data("timer");
+  //timercountdown
+    function CountDownTimer(duration, granularity) {
+      this.duration = duration;
+      this.granularity = granularity || 1000;
+      this.tickFtns = [];
+      this.running = false;
+    }
 
+    CountDownTimer.prototype.start = function() {
+      if (this.running) {
+        return;
+      }
+      this.running = true;
+      var start = Date.now(),
+        that = this,
+        diff, obj;
 
-  function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    var countdown = setInterval(function () {
-        minutes = parseInt(timer / 60, 10)
-        seconds = parseInt(timer % 60, 10);
+      (function timer() {
+        diff = that.duration - (((Date.now() - start) / 1000) | 0);
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-          $('#start').show()
-          $('#start-time').show()
-          clearInterval(countdown)
+        if (diff > 0) {
+          setTimeout(timer, that.granularity);
+        } else {
+          diff = 0;
+          that.running = false;
         }
-    }, 1000);
-  }
-  function countdown_start() {
-    $(document).ready(function () {
-      var sixtyMinutes = thetime*60,
-      display = document.querySelector('#time2');
-      startTimer(sixtyMinutes, display);
+
+        obj = CountDownTimer.parse(diff);
+        that.tickFtns.forEach(function(ftn) {
+          ftn.call(this, obj.minutes, obj.seconds);
+        }, that);
+      }());
+    };
+
+    CountDownTimer.prototype.onTick = function(ftn) {
+      if (typeof ftn === 'function') {
+        this.tickFtns.push(ftn);
+      }
+      return this;
+    };
+
+    CountDownTimer.prototype.expired = function() {
+      return !this.running;
+    };
+
+    CountDownTimer.parse = function(seconds) {
+      return {
+        'minutes': (seconds / 60) | 0,
+        'seconds': (seconds % 60) | 0
+      };
+    };
+
+  //timer code
+    var display1 = document.querySelector('#time2'),
+        timer = new CountDownTimer(#{@wizard.end - Time.now});
+
+    timer.onTick(format1).start();
+
+    function format1(minutes, seconds) {
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+      display1.textContent = minutes + ':' + seconds;
+    }
+
+    function get_text(){
+      $('#log_complete').append('<li>get_fb() ran</li>');
+      var feedback = $.ajax({
+        type: "POST",
+        url: "wizard/update_text",
+        async: false
+      }).complete(function(){
+        setTimeout(function(){get_text();}, 1000);
+      }).responseText;
+    }
+
+    $(function(){
+      get_text();
+
     });
-  }
 
-  $('#start').click(function() {
-    countdown_start()
-    $('#start').hide()
-    event.preventDefault();
-  });
-
-  function get_text(){
-    $('#log_complete').append('<li>get_fb() ran</li>');
-    var feedback = $.ajax({
-      type: "POST",
-      url: "wizard/update_text",
-      async: false
-    }).complete(function(){
-      setTimeout(function(){get_text();}, 1000);
-    }).responseText;
-  }
-
-  $(function(){
-    get_text();
-  });
+  };

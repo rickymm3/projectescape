@@ -5,8 +5,13 @@
 %br
 %br
 %br
+#timekeeper
+  =render "layouts/timekeeper", tk:@heist
 .whitetext
-  =link_to "countdown timer", countdown_index_path(timer:60)
+
+  %h1
+    The Big Score
+  =link_to "heist countdown timer", heistcountdown_index_path
   =form_tag("heist/clear_hint", method: 'post', remote:true) do
     = label_tag 'Clear Hint'
     %button{class:'btn btn-primary'}
@@ -162,6 +167,38 @@
 
 
 :javascript
+  window.onload = function() {
+
+  //check if game is running
+    function check_if_running(){
+      var feedback = $.ajax({
+        type: "POST",
+        url: "countdown/checkrunning",
+        data: {
+          "room": "heist", // Quotes were missing
+        },
+        async: false
+      }).complete(function(){
+        setTimeout(function(){check_if_running();}, 5000);
+      }).responseText;
+    }
+
+    $(function(){
+      check_if_running();
+    });
+
+  //timer code
+  var display1 = document.querySelector('#ctime1'),
+      display2 = document.querySelector('#ctime2'),
+      timer = new CountDownTimer(#{@heist.end - Time.now});
+
+  timer.onTick(format1).start();
+
+  function format1(minutes, seconds) {
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    display1.textContent = minutes + ':' + seconds;
+  }
 
   $('.message').on('click', function() {
     var data = {"message" : $(this).attr('message')};
@@ -175,3 +212,5 @@
       }
     });
   });
+
+  };
