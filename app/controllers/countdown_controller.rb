@@ -18,7 +18,7 @@ class CountdownController < ApplicationController
     tk = Timekeeper.where(room:params[:room]).first
     tk.start = Time.now
     tk.end = Time.now + 1.hour
-    tk.end = tk.start if params[:startstop] == "stop"
+    tk.end = tk.start if params[:stoptimer] == "stop"
     tk.save
     @room = check_running(tk)
   end
