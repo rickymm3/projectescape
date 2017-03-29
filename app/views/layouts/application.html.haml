@@ -6,6 +6,8 @@
     %meta(name="viewport" content="width=device-width, initial-scale=1.0")
     %meta(name="google-site-verification" content="GxXr-oIxCWDWXstb25gZe8RTc8XWt2TLJv6SVug1Wzw")
     %meta(name="description" content="Project Escape is an Escape Room located in Conshohocken, just outside Philly. Book now for a fun night out, a corporate team building exercise, or a special occasion!")
+    %meta{:content => "vxgJqKk75O1pb3leOzOxATuAEXkZomFf-F-LvHEuLLM", :name => "google-site-verification"}/
+
     %title= content_for?(:title) ? yield(:title) : "#{@title}"
     = csrf_meta_tags
     = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"
@@ -16,7 +18,6 @@
     = javascript_include_tag "application"
     %link{:href => "//fonts.googleapis.com/css?family=Open+Sans", :rel => "stylesheet", :type => "text/css"}
     %link{href:"//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", rel:"stylesheet"}
-
     = yield :head
     %body
       %header
