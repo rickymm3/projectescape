@@ -39,4 +39,8 @@ class WizardController < ApplicationController
     @room = check_running(tk)
   end
 
+  def custom_file
+
+  end
+
 end

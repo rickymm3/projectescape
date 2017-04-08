@@ -20,6 +20,11 @@
     = text_field_tag :message, "", class:'black-text', size: 75
     %button{class:'btn btn-primary'}
       submit
+  %hr
+    =link_to "Intro - Play at start of game!", "http://192.168.1.10:5000/play/",  message:"", remote:true, class: "message"
+    %button{class:'btn btn-primary idplay'}
+      Play
+  %hr
   %h4
     =link_to "<------ATTENTION!------>", "http://192.168.1.10:5000/play/96", remote:true, class:"btn btn-danger"
   %h5{style:"border:solid 1px white"}
@@ -40,41 +45,72 @@
       %br
 
     = link_to 'New Hint (must refresh page)', new_texthint2_path, class:"btn btn-warning"
+  %h3
+    Start
   %ul
-    %li
-      =link_to "Intro - Play at start of game!", "http://192.168.1.10:5000/play/1",  message:"", remote:true, class: "message"
-    %li
-      =link_to "Look closely on the wall outside the cell - arms reach", "http://192.168.1.10:5000/play/2", message: "", remote:true, class: "message"
-    %li
-      =link_to "Note looks enchanted!", "http://192.168.1.10:5000/play/4", message: "", remote:true, class: "message"
-    %li
-      =link_to "I believe the previous inmate figured out the code to that lock", "http://192.168.1.10:5000/play/6", message: "", remote:true, class: "message"
-    %li
-      =link_to "", "http://192.168.1.10:5000/play/", message: "", remote:true, class: "message"
-    %li
-      =link_to "You found my secret room!", "http://192.168.1.10:5000/play/11", message: "You found my secret room! Find a way to release the chains! Use my 3 magical items!", remote:true, class: "message"
-    %li
-      =link_to "When working together - palms", "http://192.168.1.10:5000/play/12", message: "When working together some muggles can channel strong power through their palms!", remote:true, class: "message"
-    %li
-      =link_to "Use the magical symbol in the potion room", "http://192.168.1.10:5000/play/18", message: "Use the magical symbol in the potion room to test each potion. Listen carefully!", remote:true, class: "message"
-    %li
-      =link_to "No No No! One at a time", "http://192.168.1.10:5000/play/19", message: "Try only one potion at a time!", remote:true, class: "message"
-    %li
-      =link_to "The magical symbol is outside the potion room", "http://192.168.1.10:5000/play/20", message: "I marked the same magical symbol outside the potion room as well!", remote:true, class: "message"
-    %li
-      =link_to "You solved the chess game", "http://192.168.1.10:5000/play/21", message: "You solved my game of Wizardings Chess! Where did that noise come from?", remote:true, class: "message"
-    %li
-      =link_to "I wrote about the chess game in my journal", "http://192.168.1.10:5000/play/22", message: "I wrote about the ending of the chess game in my journal", remote:true, class: "message"
-    %li
-      =link_to "I used the wanted posters", "http://192.168.1.10:5000/play/26", message: "I used the wanted posters in the dungeon to finish my notes", remote:true, class: "message"
-    %li
-      =link_to "The guards are almost back", "http://192.168.1.10:5000/play/34", message: "", remote:true, class: "message"
-    %li
-      =link_to "You win!", "http://192.168.1.10:5000/play/37", message: "", remote:true, class: "message"
-    %li
-      =link_to "You found the three magical items!!", "http://192.168.1.10:5000/play/32", message: "", remote:true, class: "message"
-    %li
-      =link_to "Painting Commisioned!!", "http://192.168.1.10:5000/play/23", message: "", remote:true, class: "message"
+    =render "wizard/link", message:"Play start", audioid:1
+  %h3
+    Dungeon
+  %ul
+    =render "wizard/link", message:"Look closely on the wall outside the cell! It appears to be just out of ‘arms’ reach!", audioid:2
+    =render "wizard/link", message:"I see something shiny on the other side of that cell door!", audioid:3
+    =render "wizard/link", message:"That note looks enchanted!  You should easily be able to find the answer, in the right light!", audioid:4
+    =render "wizard/link", message:"I believe the previous inmate figured out the combination to that lock.  Search the cell for clues! Hurry now!", audioid:5
+    =render "wizard/link", message:"The previous inmate was quite the sleuth.  He left many of his clues scribbled on the dungeon wall!", audioid:6
+    =render "wizard/link", message:"The enchantment on that note, it can only be seen under the light of the full moon! ", audioid:7
+    =render "wizard/link", message:"That parchment is too thick for the moon to pierce! Try reading the note using the light of the full moon!", audioid:8
+    =render "wizard/link", message:"Press the stone bricks in the right order! Do it quickly!", audioid:10
+  %h3
+    New Room
+  %ul
+    =render "wizard/link", message:"Secret Room", audioid:11
+  %h3
+    Wizard Room
+  %ul
+    =render "wizard/link", message:"When working together, some Muggles can channel strong magic through their palms!", audioid:12
+    =render "wizard/link", message:"Look for a place you can channel your magical energy!", audioid:13
+    =render "wizard/link", message:"Those pesky paintings, they can’t help but look right at my secret! Can you figure it out? Quickly now!", audioid:14
+    =render "wizard/link", message:" Watch each painting carefully, they can’t help but look at the answer!  1, then 2, then 3!", audioid:16
+  %h3
+    Potions
+  %ul
+    =render "wizard/link", message:"I left some useful spells in my spellbook, Look for them If you haven’t yet found them!", audioid:17
+    =render "wizard/link", message:"Use the magical symbol I made inside the potion room to test each of the ingredients. Listen carefully!", audioid:18
+    =render "wizard/link", message:"No, no, no, one at a time!  Try only one potion at a time! ", audioid:19
+    =render "wizard/link", message:"I marked the same magical symbol outside the potion room as well!", audioid:20
+  %h3
+    Chess
+  %ul
+    =render "wizard/link", message:"You’ve solved my game of Wizard’s Chess!  Wonderful! A.D. mentioned a surprise...Where did that noise come from?", audioid:21
+    =render "wizard/link", message:"I wrote about the outcome of my chess game in my journal!  Why don’t you take another look?", audioid:22
+  %h3
+    Wanted Posters
+  %ul
+    =render "wizard/link", message:"(notwokring)I wrote some notes about the death eaters on the back of Sirius Black’s wanted poster.", audioid:25
+    =render "wizard/link", message:"I used the wanted posters on the wall in the dungeon to help finish my notes!", audioid:26
+    =render "wizard/link", message:"Those wanted posters in the dungeon, they are missing a key piece of information!", audioid:27
+  %h3
+    Random
+  %ul
+    =render "wizard/link", message:"I had a painting commissioned to commemorate my 3 magical items!  Did you see it?", audioid:23
+    =render "wizard/link", message:"You may have escaped the dungeon, but you’re not done with it …. Yet.", audioid:28
+    =render "wizard/link", message:"The placement of those items is magical, it must be exact! Look for hints on the table as to how to place it just right!", audioid:29
+    =render "wizard/link", message:"You've found all 3 of my magical items! They are the key to breaking the chains to the exit!", audioid:30
+    =render "wizard/link", message:"You found my TriWizards Cup!  Hmph, okay! Perhaps I didn’t win it in the tournament, but It is still one of my precious items.  ", audioid:31
+    =render "wizard/link", message:"You found all my precious items!  But your escape is not finished! You need to use all three of these items together in order to break the chains!  ", audioid:32
+    =render "wizard/link", message:"Aha! You found my armillary sphere! ", audioid:33
+    =render "wizard/link", message:"The guards are almost back!  You must escape, Quickly now!  Hurry!", audioid:34
+    =render "wizard/link", message:"You’ll have to find the correct wooden symbols, There are 3! Then place it into properly into their setting.", audioid:35
+    =render "wizard/link", message:"Each of those items have sat on that table for years.  The table has been worn down to show it!", audioid:36
+
+
+
+
+
+
+
+
+
 
 
 :javascript
