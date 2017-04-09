@@ -440,7 +440,6 @@ pre {
 }
 
 #time2 {
-  padding-left: 75px;
   font-size: 350px;
   text-align: left;
   color: white!important;
@@ -540,4 +539,30 @@ img.bookimages {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.wiztime {
+  font-family: "harryp"!important;
+}
+
+.wiztime2 {
+  padding-left: 40px;
+  text-align: left;
+  width: 800px!important;
+}
+
+.wizard {
+  width:800px;
+  color: white;
+  margin-top: -75px;
+  font-size: 40px;
+  font-family: "harryp";
+}
+
+ul.highlight {
+  background-color: white;
+  color: red;
+  a {
+    color: black;
+  }
 }

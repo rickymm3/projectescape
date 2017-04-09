@@ -1,10 +1,3 @@
-%nav.navbar.navbar-default.navbar-fixed-top
-  .container
-    =link_to "<------ATTENTION!------>", "http://192.168.1.10:5000/play/96", remote:true, class:"btn btn-danger"
-
-%br
-%br
-%br
 #timekeeper
   =render "layouts/timekeeper", tk:@wizard
 .whitetext
@@ -20,13 +13,6 @@
     = text_field_tag :message, "", class:'black-text', size: 75
     %button{class:'btn btn-primary'}
       submit
-  %hr
-    =link_to "Intro - Play at start of game!", "http://192.168.1.10:5000/play/",  message:"", remote:true, class: "message"
-    %button{class:'btn btn-primary idplay'}
-      Play
-  %hr
-  %h4
-    =link_to "<------ATTENTION!------>", "http://192.168.1.10:5000/play/96", remote:true, class:"btn btn-danger"
   %h5{style:"border:solid 1px white"}
     %p Dynamic text hints
     %table
@@ -47,7 +33,7 @@
     = link_to 'New Hint (must refresh page)', new_texthint2_path, class:"btn btn-warning"
   %h3
     Start
-  %ul
+  %ul.highlight
     =render "wizard/link", message:"Play start", audioid:1
   %h3
     Dungeon
@@ -62,7 +48,7 @@
     =render "wizard/link", message:"Press the stone bricks in the right order! Do it quickly!", audioid:10
   %h3
     New Room
-  %ul
+  %ul.highlight
     =render "wizard/link", message:"Secret Room", audioid:11
   %h3
     Wizard Room
@@ -83,6 +69,8 @@
   %ul
     =render "wizard/link", message:"You’ve solved my game of Wizard’s Chess!  Wonderful! A.D. mentioned a surprise...Where did that noise come from?", audioid:21
     =render "wizard/link", message:"I wrote about the outcome of my chess game in my journal!  Why don’t you take another look?", audioid:22
+    =render "wizard/link", message:"You’ll have to find the correct wooden symbols, There are 3! Then place it into properly into their setting.", audioid:35
+
   %h3
     Wanted Posters
   %ul
@@ -90,19 +78,20 @@
     =render "wizard/link", message:"I used the wanted posters on the wall in the dungeon to help finish my notes!", audioid:26
     =render "wizard/link", message:"Those wanted posters in the dungeon, they are missing a key piece of information!", audioid:27
   %h3
+    Ending
+  %ul
+    =render "wizard/link", message:"You've found all 3 of my magical items! They are the key to breaking the chains to the exit!", audioid:30
+    =render "wizard/link", message:"I had a painting commissioned to commemorate my 3 magical items!  Did you see it?", audioid:23
+    =render "wizard/link", message:"The placement of those items is magical, it must be exact! Look for hints on the table as to how to place it just right!", audioid:29
+    =render "wizard/link", message:"You found all my precious items!  But your escape is not finished! You need to use all three of these items together in order to break the chains!  ", audioid:32
+    =render "wizard/link", message:"Each of those items have sat on that table for years.  The table has been worn down to show it!", audioid:36
+  %h3
     Random
   %ul
-    =render "wizard/link", message:"I had a painting commissioned to commemorate my 3 magical items!  Did you see it?", audioid:23
-    =render "wizard/link", message:"You may have escaped the dungeon, but you’re not done with it …. Yet.", audioid:28
-    =render "wizard/link", message:"The placement of those items is magical, it must be exact! Look for hints on the table as to how to place it just right!", audioid:29
-    =render "wizard/link", message:"You've found all 3 of my magical items! They are the key to breaking the chains to the exit!", audioid:30
-    =render "wizard/link", message:"You found my TriWizards Cup!  Hmph, okay! Perhaps I didn’t win it in the tournament, but It is still one of my precious items.  ", audioid:31
-    =render "wizard/link", message:"You found all my precious items!  But your escape is not finished! You need to use all three of these items together in order to break the chains!  ", audioid:32
-    =render "wizard/link", message:"Aha! You found my armillary sphere! ", audioid:33
     =render "wizard/link", message:"The guards are almost back!  You must escape, Quickly now!  Hurry!", audioid:34
-    =render "wizard/link", message:"You’ll have to find the correct wooden symbols, There are 3! Then place it into properly into their setting.", audioid:35
-    =render "wizard/link", message:"Each of those items have sat on that table for years.  The table has been worn down to show it!", audioid:36
-
+    =render "wizard/link", message:"You may have escaped the dungeon, but you’re not done with it …. Yet.", audioid:28
+    =render "wizard/link", message:"You found my TriWizards Cup!  Hmph, okay! Perhaps I didn’t win it in the tournament, but It is still one of my precious items.  ", audioid:31
+    =render "wizard/link", message:"Aha! You found my armillary sphere! ", audioid:33
 
 
 

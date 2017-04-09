@@ -1,8 +1,10 @@
 .background-countdown
   #start-game
-  %span#time2
-  #hint-text.white-text
-    #findtime{ "data-timer" => @timer}
+  .center.wiztime2
+    %span#time2.wiztime
+  .center.wizard
+    #hint-text.white-text
+      #findtime{ "data-timer" => @timer}
 
 :javascript
   window.onload = function() {
