@@ -4,6 +4,7 @@ class WizardController < ApplicationController
     @texthint2s = Texthint2.all
     @wizard = Timekeeper.where(room:"wizard").first
     render layout: "countdown"
+    @nowrite = false
   end
 
   def playfile

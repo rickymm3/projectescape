@@ -560,9 +560,22 @@ img.bookimages {
 }
 
 ul.highlight {
-  background-color: white;
-  color: red;
-  a {
-    color: black;
+  li {
+    background-color: white;
+    color: red;
+    a {
+      color: red;
+    }
+    width: 600px;
   }
+}
+
+.red {
+  a {
+    color:red!important;
+  }
+}
+
+.white {
+  color:white;
 }
