@@ -23,7 +23,7 @@
       %td
         %span#ctime1
       %td
-        =form_tag(addtime_countdown_index_path(tk:tk), method: 'post', remote:true) do
+        =form_tag(addtime_countdown_index_path(tk:tk), method: 'post') do
           = label_tag 'Time+/-'
           = number_field_tag :astime, "", class:'black-text smallinput'
           %button{class:'btn btn-primary'}

@@ -33,6 +33,11 @@ class CountdownController < ApplicationController
     time = params[:astime].to_i
     tk.end = tk.end + time.minute
     tk.save
+    if tk.room == "wizard"
+      redirect_to wizard_index_path
+    else
+      redirect_to heist_index_path
+    end
   end
 
   def pause
