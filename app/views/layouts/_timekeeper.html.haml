@@ -7,12 +7,15 @@
       %td Time
       %td Adjust
     %tr
-      %td.white
-        =tk.room.capitalize
-      %td
-        -if tk.room == "wizard"
+      -if tk.room == "wizard"
+        %td.white
+          =link_to 'Wizard(countdown)', wizardcountdown_index_path,target: :_blank
+        %td
           #wizardisrunning
-        -if tk.room == "heist"
+      -if tk.room == "heist"
+        %td.white
+          =link_to 'Heist(countdown)', heistcountdown_index_path,target: :_blank
+        %td
           #heistisrunning
       %td
         #startstop

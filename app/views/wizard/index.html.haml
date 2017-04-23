@@ -98,49 +98,46 @@
   =render "wizard/link", nowrite:false, message:"You found my TriWizards Cup!  Hmph, okay! Perhaps I didn’t win it in the tournament, but It is still one of my precious items.  ", audioid:31
   =render "wizard/link", nowrite:false, message:"Aha! You found my armillary sphere! ", audioid:33
 
-
-
-
-
-
-
-
-
-
 :javascript
   window.onload = function() {
 
     //check if game is running
-    function check_if_running(){
-      var feedback = $.ajax({
-        type: "POST",
-        url: "countdown/checkrunning",
-        data: {
-          "room": "wizard"
-        },
-        async: false
-      }).complete(function(){
-        setTimeout(function(){check_if_running();}, 5000);
-      }).responseText;
-    }
 
     $(function(){
       check_if_running();
     });
 
-    //timer code
-    var display1 = document.querySelector('#ctime1'),
-        timer = new CountDownTimer(#{@wizard.end - Time.now});
-
-    timer.onTick(format1).start();
-
-    function format1(minutes, seconds) {
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
-      display1.textContent = minutes + ':' + seconds;
-    }
-
   };
+
+  //timer code
+
+  function check_if_running(){
+    var feedback = $.ajax({
+      type: "POST",
+      url: "countdown/checkrunning",
+      data: {
+        "room": "wizard"
+      },
+      async: false,
+      success: function(data) {
+        var timer = new CountDownTimer(#{@countdown});
+        timer.onTick(format1).start();
+      }
+    }).complete(function(){
+      setTimeout(function(){check_if_running();}, 10000);
+    }).responseText;
+  }
+
+  var timer = new CountDownTimer(#{@countdown});
+  var display1 = document.querySelector('#ctime1');
+
+  timer.onTick(format1).start();
+
+  function format1(minutes, seconds) {
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    display1.textContent = minutes + ':' + seconds;
+  }
 
   $('.message').on('click', function() {
     var data = {"message" : $(this).attr('message')};
@@ -154,3 +151,4 @@
       }
     });
   });
+

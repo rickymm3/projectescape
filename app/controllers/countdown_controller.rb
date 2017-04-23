@@ -21,6 +21,11 @@ class CountdownController < ApplicationController
     tk.end = tk.start if params[:stoptimer] == "stop"
     tk.save
     @room = check_running(tk)
+    if tk.room == "wizard"
+      redirect_to wizard_index_path
+    else
+      redirect_to heist_index_path
+    end
   end
 
   def addtime

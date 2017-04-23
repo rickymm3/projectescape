@@ -3,6 +3,7 @@ class WizardController < ApplicationController
   def index
     @texthint2s = Texthint2.all
     @wizard = Timekeeper.where(room:"wizard").first
+    @countdown = @wizard.end - Time.now
     render layout: "countdown"
     @nowrite = false
   end
@@ -28,6 +29,7 @@ class WizardController < ApplicationController
   def checkrunning
     wizardtk = Timekeeper.where(room:"wizard").first
     @wizard = check_running(wizardtk)
+    @countdown = @wizard.end - Time.now
   end
 
   def starttimer

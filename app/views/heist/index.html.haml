@@ -1,12 +1,12 @@
 %nav.navbar.navbar-default.navbar-fixed-top
   .container
     =link_to "<------ATTENTION!------>", "http://192.168.1.161:5000/play/98", remote:true, class:"btn btn-danger"
-
+    #timekeeper.white
+      =render "layouts/timekeeper", tk:@heist
 %br
 %br
 %br
-#timekeeper
-  =render "layouts/timekeeper", tk:@heist
+%br
 .whitetext
 
   %h1
