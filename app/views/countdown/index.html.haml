@@ -1,28 +1,6 @@
-%table.timekeeper
-  %tbody
-    %tr
-      %td Room
-      %td Active
-      %td Start/Stop
-      %td Time
-    %tr
-      %td.left Heist
-      %td
-        #heistisrunning
-      %td
-        #heiststartstop
-          =render "countdown/startstop", room:"heist", tk: @heist
-      %td
-        %span#ctime1
-    %tr
-      %td.left Wizard
-      %td
-        #wizardisrunning
-      %td
-        #wizardstartstop
-          =render "countdown/startstop", room:"wizard", tk: @wizard
-      %td
-        %span#ctime2
+#timekeeper.white
+  =render "layouts/timekeeper", tk:@heist
+  =render "layouts/timekeeper", tk:@wizard
 
 :javascript
   window.onload = function() {

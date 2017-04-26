@@ -118,11 +118,7 @@
       data: {
         "room": "wizard"
       },
-      async: false,
-      success: function(data) {
-        var timer = new CountDownTimer(#{@countdown});
-        timer.onTick(format1).start();
-      }
+      async: false
     }).complete(function(){
       setTimeout(function(){check_if_running();}, 10000);
     }).responseText;
