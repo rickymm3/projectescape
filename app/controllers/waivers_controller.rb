@@ -4,10 +4,11 @@ class WaiversController < ApplicationController
   # GET /waivers
   # GET /waivers.json
   def index
-    @waivers = Waiver.all
+    @waivers = Waiver.where(:updated_at => (Time.now-2.hour)..Time.now).order( 'updated_at DESC' )
     if params[:pw] == "pe2016"
       @pwaccepted = true
     end
+
   end
 
   # GET /waivers/1
