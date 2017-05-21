@@ -3,13 +3,13 @@
     .pull-left
       =link_to "<------ATTENTION!------>", "http://192.168.1.161:5000/play/98", remote:true, class:"btn btn-danger"
     .pull-left.white
-      =form_tag("wizard/custom_message", method: 'post', remote:true) do
+      =form_tag("heist/custom_message", method: 'post', remote:true) do
         = label_tag 'Type Hint'
         = text_field_tag :message, "", class:'black-text', size: 75
         %button{class:'btn btn-primary'}
           submit
     .pull-left.white
-      =form_tag("wizard/clear_hint", method: 'post', remote:true) do
+      =form_tag("heist/clear_hint", method: 'post', remote:true) do
         = label_tag 'Clear Hint'
         %button{class:'btn btn-primary'}
           %i.fa.fa-stop
