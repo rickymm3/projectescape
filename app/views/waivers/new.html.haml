@@ -1,0 +1,35 @@
+-if @room == "wizard"
+  -room = "The Wizard's Secret"
+-else
+  -room = "The Big Score"
+
+%h1 Project Escape Release and Waiver Agreement
+= flash_messages
+
+%p
+  You are entering the
+  %b #{room}
+
+%p
+  By digitally signing the below form, you are confirming that you have read and agree to Project Escapes
+  Release and Waiver agreement form.
+%p
+-if params[:room]
+  = render 'form'
+-if !params[:room]
+  Please select a room for the current group:
+
+.waiver-links
+  change room:
+  -if @room == "wizard"
+    = link_to 'wizard', "#", class: "btn btn-sm waiver-border"
+    = link_to 'heist', new_waivers_path(room:"heist"), class: "btn btn-sm"
+  -if @room == "heist"
+    = link_to 'wizard', new_waivers_path(room:"wizard"), class: "btn btn-sm"
+    = link_to 'heist', "#", class: "btn btn-sm waiver-border"
+  -if !@room
+    = link_to 'wizard', new_waivers_path(room:"wizard"), class: "btn btn-sm"
+    = link_to 'heist', new_waivers_path(room:"heist"), class: "btn btn-sm"
+
+
+

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :waivers
+
   resources :texthint2s
 
   resources :texthints
@@ -13,6 +15,7 @@ Rails.application.routes.draw do
   resources :rooms
   root 'welcome#index'
   resources :parties
+  resource :waivers
 
   resources :heist do
     collection do
@@ -23,6 +26,8 @@ Rails.application.routes.draw do
       post :testing
     end
   end
+
+  resource :waiver
 
   resources :wizard do
     collection do
