@@ -18,18 +18,22 @@
   = render 'form'
 -if !params[:room]
   Please select a room for the current group:
+%br
+%br
 
-.waiver-links
-  change room:
-  -if @room == "wizard"
-    = link_to 'wizard', "#", class: "btn btn-sm waiver-border"
-    = link_to 'heist', new_waivers_path(room:"heist"), class: "btn btn-sm"
-  -if @room == "heist"
-    = link_to 'wizard', new_waivers_path(room:"wizard"), class: "btn btn-sm"
-    = link_to 'heist', "#", class: "btn btn-sm waiver-border"
-  -if !@room
-    = link_to 'wizard', new_waivers_path(room:"wizard"), class: "btn btn-sm"
-    = link_to 'heist', new_waivers_path(room:"heist"), class: "btn btn-sm"
+%footer.footer
+  .container
+    .waiver-links
+      change room:
+      -if @room == "wizard"
+        = link_to 'wizard', "#", class: "btn btn-sm waiver-border"
+        = link_to 'heist', new_waivers_path(room:"heist"), class: "btn btn-sm"
+      -if @room == "heist"
+        = link_to 'wizard', new_waivers_path(room:"wizard"), class: "btn btn-sm"
+        = link_to 'heist', "#", class: "btn btn-sm waiver-border"
+      -if !@room
+        = link_to 'wizard', new_waivers_path(room:"wizard"), class: "btn btn-sm"
+        = link_to 'heist', new_waivers_path(room:"heist"), class: "btn btn-sm"
 
 
 

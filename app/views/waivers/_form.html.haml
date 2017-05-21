@@ -7,12 +7,12 @@
           %li= msg
 
   %p
-    .input-group
-      %span#basic-addon1.input-group-addon Name:
+    .input-group.input-group-lg
+      %span#size-addon1.input-group-addon Name:
       = f.text_field :name, class: "form-control", :required => true
   %p
-    .input-group
-      %span#basic-addon1.input-group-addon Email:
+    .input-group.input-group-lg
+      %span#size-addon1.input-group-addon Email:
       = f.email_field :email, class: "form-control", :required => true
   .field
     = f.hidden_field :room, value: @room

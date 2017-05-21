@@ -9,6 +9,10 @@ class WaiversController < ApplicationController
       @pwaccepted = true
     end
 
+    respond_to do |format|
+      format.html
+      format.csv { send_data Waiver.all.to_csv }
+    end
   end
 
   # GET /waivers/1
