@@ -33,7 +33,7 @@ class WaiversController < ApplicationController
 
     respond_to do |format|
       if @waiver.save
-        format.html { redirect_to new_waiver_path, notice: 'Waiver was successfully created.' }
+        format.html { redirect_to new_waiver_path(room:waiver_params[:room]), notice: 'Waiver was successfully created.' }
         format.json { render :show, status: :created, location: @waiver }
       else
         format.html { render :new }
