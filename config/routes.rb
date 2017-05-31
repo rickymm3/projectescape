@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   resources :rooms
   root 'welcome#index'
   resources :parties
-  resource :waivers
 
   resources :heist do
     collection do
