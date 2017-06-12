@@ -8,15 +8,22 @@ class ImpressionsController < ApplicationController
     require 'gruff'
     g = Gruff::Line.new
     g.title = 'Impression chart'
-    day = Time.now.beginning_of_day
-    i8 = Impression.where(:created_at => Time.now..day).count
-    i7 = Impression.where(:created_at => 1.day.ago.beginning_of_day..day).count
-    i6 = Impression.where(:created_at => 2.day.ago.beginning_of_day..1.day.ago.beginning_of_day).count
-    i5 = Impression.where(:created_at => 3.day.ago.beginning_of_day..2.day.ago.beginning_of_day).count
-    i4 = Impression.where(:created_at => 4.day.ago.beginning_of_day..3.day.ago.beginning_of_day).count
-    i3 = Impression.where(:created_at => 5.day.ago.beginning_of_day..4.day.ago.beginning_of_day).count
-    i2 = Impression.where(:created_at => 6.day.ago.beginning_of_day..5.day.ago.beginning_of_day).count
-    i1 = Impression.where(:created_at => 7.day.ago.beginning_of_day..6.day.ago.beginning_of_day).count
+    today = 0.day.ago.beginning_of_day
+    yesterday = 1.day.ago.beginning_of_day
+    twodaysago = 2.day.ago.beginning_of_day
+    threedaysago = 3.day.ago.beginning_of_day
+    fourdaysago = 4.day.ago.beginning_of_day
+    fivedaysago = 5.day.ago.beginning_of_day
+    sixdaysago = 6.day.ago.beginning_of_day
+    sevondaysago = 7.day.ago.beginning_of_day
+    i8 = Impression.where(:created_at => today..Time.now).count
+    i7 = Impression.where(:created_at => yesterday..today).count
+    i6 = Impression.where(:created_at => twodaysago..yesterday).count
+    i5 = Impression.where(:created_at => threedaysago..twodaysago).count
+    i4 = Impression.where(:created_at => fourdaysago..threedaysago).count
+    i3 = Impression.where(:created_at => fivedaysago..fourdaysago).count
+    i2 = Impression.where(:created_at => sixdaysago..fivedaysago).count
+    i1 = Impression.where(:created_at => 7.day.ago.beginning_of_day..sixdaysago).count
 
     g.labels = {
                  0 => 7.days.ago.strftime("%b %d"),
