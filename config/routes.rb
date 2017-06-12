@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :parties
   resource :waivers
+  resource :impressions
 
   resources :heist do
     collection do

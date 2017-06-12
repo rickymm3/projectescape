@@ -59,6 +59,8 @@ GEM
     execjs (2.6.0)
     font-awesome-rails (4.5.0.0)
       railties (>= 3.2, < 5.0)
+    gruff (0.7.0)
+      rmagick (~> 2.13, >= 2.13.4)
     haml (4.0.7)
       tilt
     haml-rails (0.9.0)
@@ -126,6 +128,7 @@ GEM
     rake (11.1.2)
     rdoc (4.2.1)
       json (~> 1.4)
+    rmagick (2.16.0)
     ruby_parser (3.7.2)
       sexp_processor (~> 4.1)
     sass (3.2.19)
@@ -167,6 +170,7 @@ DEPENDENCIES
   binding_of_caller
   coffee-rails (~> 4.0.0)
   font-awesome-rails
+  gruff
   haml-rails
   httparty
   impressionist
@@ -174,6 +178,7 @@ DEPENDENCIES
   jquery-rails
   pg
   rails (= 4.1.8)
+  rmagick
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   sitemap_generator
