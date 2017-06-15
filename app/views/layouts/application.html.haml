@@ -18,6 +18,8 @@
     = javascript_include_tag "application"
     %link{:href => "//fonts.googleapis.com/css?family=Open+Sans", :rel => "stylesheet", :type => "text/css"}
     %link{href:"//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", rel:"stylesheet"}
+    %script{src:"https://fareharbor.com/embeds/api/v1/?autolightframe=yes"}
+
     = yield :head
     %body
       %header
@@ -83,3 +85,4 @@
     el.href = basePath + "/widget_button.css?ts="+stamp;
     el.rel="stylesheet"; el.type="text/css"; head.appendChild(el);
   })();
+
