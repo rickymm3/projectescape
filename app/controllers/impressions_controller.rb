@@ -8,6 +8,28 @@ class ImpressionsController < ApplicationController
     require 'gruff'
     g = Gruff::Line.new
     g.title = 'Impression chart'
+
+    if params[:days]
+      i = params[:days]
+    else
+      i = 7
+    end
+    count = i
+    a = Array.new(i) { Object.new }
+    b = 0
+
+    a.each do |order|
+      theday = i - count
+      if theday == 0
+        yesterday = Time.now
+      else
+        yesterday = theday + 1
+      end
+      a[b] = Impression.where(created_at: theday.day.ago.beginning_of_day..yesterday.day.ago.beginning_of_day)
+      count = count - 1
+      b = b + 1
+    end
+    
     today = 0.day.ago.beginning_of_day
     yesterday = 1.day.ago.beginning_of_day
     twodaysago = 2.day.ago.beginning_of_day
@@ -15,7 +37,6 @@ class ImpressionsController < ApplicationController
     fourdaysago = 4.day.ago.beginning_of_day
     fivedaysago = 5.day.ago.beginning_of_day
     sixdaysago = 6.day.ago.beginning_of_day
-    sevondaysago = 7.day.ago.beginning_of_day
     i8 = Impression.where(:created_at => today..Time.now).count
     i7 = Impression.where(:created_at => yesterday..today).count
     i6 = Impression.where(:created_at => twodaysago..yesterday).count
