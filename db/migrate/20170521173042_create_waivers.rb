@@ -1,4 +1,4 @@
-class CreateWaivers < ActiveRecord::Migration
+class CreateWaivers < ActiveRecord::Migration[5.0]
   def change
     create_table :waivers do |t|
       t.string :name

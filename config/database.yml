@@ -1,15 +1,15 @@
 development:
   adapter: postgresql
-  database: Ricky
-  username: Ricky
+  database: ricky
+  username: ricky
   password:
   encoding: utf8
   pool: 5
 
 test: &test
   adapter: postgresql
-  database: Ricky
-  username: Ricky
+  database: ricky
+  username: ricky
   password:
   encoding: utf8
   pool: 5

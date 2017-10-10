@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   include ApplicationHelper
-  before_filter :default_title
 
   def default_title
     @title = "Project Escape, Conshohocken's Escape Room"

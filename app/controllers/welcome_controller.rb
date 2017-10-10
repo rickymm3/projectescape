@@ -1,5 +1,4 @@
 class WelcomeController < ApplicationController
-  before_filter :assign_title
   impressionist :actions=>[:index],:unique => [:session_hash]
   def index
 

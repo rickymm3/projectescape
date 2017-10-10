@@ -1,4 +1,4 @@
-class CreateTexthint2s < ActiveRecord::Migration
+class CreateTexthint2s < ActiveRecord::Migration[5.0]
   def change
     create_table :texthint2s do |t|
       t.string :message
