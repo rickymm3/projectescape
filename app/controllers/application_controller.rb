@@ -7,7 +7,6 @@ class ApplicationController < ActionController::Base
   def default_title
     @title = "Project Escape, Conshohocken's Escape Room"
     @full_width_css = ""
-
   end
 
 end
