@@ -7,7 +7,7 @@
 
 .post-container {
   background-color: #fafafa;
-  padding: 5px;
+  padding: 10px;
   margin-bottom: 5px;
 }
 
@@ -17,4 +17,14 @@
 
 .post-heading {
   font-weight: bold;
+  font-size: 14px;
+  %h5 {
+    margin-top: 0px!important;
+  }
+
+}
+
+.post-content {
+  margin-top: -10px;
+  background-color: white;
 }
