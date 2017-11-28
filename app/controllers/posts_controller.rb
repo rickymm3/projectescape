@@ -5,6 +5,9 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    if params[:pw] == "pe2016"
+      @pwaccepted = true
+    end
   end
 
   # GET /posts/1
