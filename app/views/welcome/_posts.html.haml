@@ -1,0 +1,10 @@
+-@posts.each do |post|
+  .post-container
+    .post-header
+      %p.post-date
+        =post.updated_at.to_date
+      %h4.post-heading
+        =post.heading
+      %hr
+    %p
+      =post.content.html_safe

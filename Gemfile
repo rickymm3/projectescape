@@ -31,6 +31,7 @@ gem 'sitemap_generator'
 gem 'httparty'
 gem 'rmagick'
 gem 'gruff'
+gem 'ckeditor'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

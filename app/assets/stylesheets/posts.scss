@@ -1,0 +1,19 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.post-header {
+  position:relative;
+}
+
+.post-container {
+  background-color: #fafafa;
+  padding: 5px;
+}
+
+.post-date {
+  text-align: right;
+}
+
+.post-heading {
+  font-weight: bold;
+}
