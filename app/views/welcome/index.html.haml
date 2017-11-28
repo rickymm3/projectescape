@@ -53,12 +53,17 @@
               expertly crafted escape room games.  Book now to experience the phenomenon.
         .posts
           =render "posts"
+      #fb-root
       .twitter-hide.col-xs-12.col-sm-4.col-md-4.col-lg-4.border-right
-        %a.twitter-timeline{"data-widget-id" => "717107603227164672", :href => "https://twitter.com/projectescapePA"} Tweets by @projectescapePA
+        .fb-page-container
+          .fb-page{"data-adapt-container-width" => "true", "data-hide-cover" => "true", "data-href" => "https://www.facebook.com/projectescaperoom/", "data-height"=>"800", "data-show-facepile" => "true", "data-small-header" => "false", "data-tabs" => "timeline"}
+            %blockquote.fb-xfbml-parse-ignore{:cite => "https://www.facebook.com/projectescaperoom/"}
+              %a{:href => "https://www.facebook.com/projectescaperoom/"} Project Escape      -#.twitter-hide.col-xs-12.col-sm-4.col-md-4.col-lg-4.border-right
 .events
   =render "events"
 
 :javascript
+
   {
   "@context": "http://schema.org",
   "@type": "LocalBusiness",
