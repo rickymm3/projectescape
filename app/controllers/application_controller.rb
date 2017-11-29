@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
 
   def default_title
-    @title = "Project Escape, Conshohocken's Escape Room"
+    @title = "Project Escape | The Philly Areas Best Escape Room Experience"
     @full_width_css = ""
   end
 
