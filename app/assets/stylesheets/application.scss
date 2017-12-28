@@ -588,3 +588,16 @@ ul.highlight {
 .fb-page-container {
   height: 800px;
 }
+
+.wizard-painting {
+  position:absolute;
+  color: black!important;
+
+  background-image: url("hogwarts.jpg");
+
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -6,6 +6,8 @@ class WizardController < ApplicationController
     @countdown = @wizard.end - Time.now
     render layout: "countdown"
     @nowrite = false
+    @room = "Project escape"
+
   end
 
   def playfile
