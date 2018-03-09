@@ -1,0 +1,25 @@
+.container
+  -a = []
+  -a.push params['one'].to_i
+  -a.push params['two'].to_i
+  -a.push params['three'].to_i
+  -a.push params['four'].to_i
+  -a.push params['five'].to_i
+  -a.push params['six'].to_i
+
+  -b = [1,2,3,0,0,0]
+
+  -if a == b
+    ="Success"
+    =image_tag "steamgenerator.jpg"
+  -else
+    ="Incorrect Date - Please go BACK and reenter"
+    =link_to "nuclearpw", nuclearpw_index_path
+
+
+
+
+
+
+
+

@@ -30,6 +30,11 @@ Rails.application.routes.draw do
   end
 
   resource :waiver
+  resources :nuclearpw do
+    collection do
+      post :checkpw
+    end
+  end
 
   resources :wizard do
     collection do
