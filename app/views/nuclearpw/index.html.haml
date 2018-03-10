@@ -6,7 +6,7 @@
   %br
 
   = form_tag checkpw_nuclearpw_index_path do
-    .date
+    .date.white
       Day
       = select_tag :one, options_for_select(0..9)
       = select_tag :two, options_for_select(0..9)
@@ -16,7 +16,7 @@
       Year
       = select_tag :five, options_for_select(0..9)
       = select_tag :six, options_for_select(0..9)
-    .actions
+    .actions.white
       = submit_tag 'Submit'
 
 
