@@ -8,11 +8,11 @@
   = form_tag checkpw_nuclearpw_index_path do
     .date
       .white
-        Day
+        Month
       = select_tag :one, options_for_select(0..9)
       = select_tag :two, options_for_select(0..9)
       .white
-        Month
+        Day
       = select_tag :three, options_for_select(0..9)
       = select_tag :four, options_for_select(0..9)
       .white
