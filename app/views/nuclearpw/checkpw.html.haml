@@ -10,11 +10,13 @@
   -b = [0,1,1,0,1,8]
 
   -if a == b
-    ="Success"
-    =image_tag "steamgenerator.jpg"
+    .white
+      ="Success"
+      =image_tag "steamgenerator.jpg"
   -else
-    ="Incorrect Date - Please go BACK and reenter"
-    =link_to "nuclearpw", nuclearpw_index_path
+    .white
+      ="Incorrect Date - Please go BACK and reenter"
+      =link_to "nuclearpw", nuclearpw_index_path
 
 
 
