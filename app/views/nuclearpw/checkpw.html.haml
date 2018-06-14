@@ -1,15 +1,5 @@
 .container
-  -a = []
-  -a.push params['one'].to_i
-  -a.push params['two'].to_i
-  -a.push params['three'].to_i
-  -a.push params['four'].to_i
-  -a.push params['five'].to_i
-  -a.push params['six'].to_i
-
-  -b = [0,4,1,0,1,8]
-
-  -if a == b
+  -if @fail == false
     .white
       ="Success"
       =image_tag "steamgenerator.png"
