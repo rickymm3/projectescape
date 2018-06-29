@@ -8,3 +8,9 @@
 <%elsif %>
     $('#wizardisrunning').html('<%=j render 'countdown/onoff', check:false %>');
 <%end%>
+<%if @nuclear %>
+    $('#nuclearisrunning').html('<%=j render 'countdown/onoff', check:true %>');
+<%elsif %>
+    $('#nuclearisrunning').html('<%=j render 'countdown/onoff', check:false %>');
+<%end%>
+

@@ -4,3 +4,7 @@
 <%if @wizard %>
     $('#wizardisrunning').html('<%=j render 'countdown/startstop', room: "wizard", check:true %>');
 <%end%>
+<%if @nuclear %>
+    $('#nuclearisrunning').html('<%=j render 'countdown/startstop', room: "nuclear", check:true %>');
+<%end%>
+

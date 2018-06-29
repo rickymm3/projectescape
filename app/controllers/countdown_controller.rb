@@ -2,6 +2,8 @@ class CountdownController < ApplicationController
   def index
     @heist = Timekeeper.where(room:"heist").first
     @wizard = Timekeeper.where(room:"wizard").first
+    @nuclear = Timekeeper.where(room:"nuclear").first
+
   end
 
   def checkrunning
@@ -11,6 +13,9 @@ class CountdownController < ApplicationController
     elsif params[:room] == "wizard"
       wizardtk = Timekeeper.where(room:"wizard").first
       @wizard = check_running(wizardtk)
+    elsif params[:room] == "nuclear"
+      nucleartk = Timekeeper.where(room:"nuclear").first
+      @nuclear = check_running(nucleartk)
     end
   end
 
@@ -23,8 +28,10 @@ class CountdownController < ApplicationController
     @room = check_running(tk)
     if tk.room == "wizard"
       redirect_to wizard_index_path
-    else
+    elsif tk.room == "heist"
       redirect_to heist_index_path
+    else
+      redirect_to nuclear_index_path
     end
   end
 
@@ -35,8 +42,10 @@ class CountdownController < ApplicationController
     tk.save
     if tk.room == "wizard"
       redirect_to wizard_index_path
-    else
+    elsif tk.room == "heist"
       redirect_to heist_index_path
+    else
+      redirect_to nuclear_index_path
     end
   end
 
