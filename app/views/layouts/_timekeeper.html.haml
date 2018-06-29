@@ -17,9 +17,14 @@
           =link_to 'Heist(countdown)', heistcountdown_index_path,target: :_blank
         %td
           #heistisrunning
+      -if tk.room == "nuclear"
+        %td.white
+          =link_to 'Nuclear(countdown)', nuclearcountdown_index_path,target: :_blank
+        %td
+          #nuclearisrunning
       %td
         #startstop
-          =render "countdown/startstop", tk: tk
+          =render "countdown/startstop", tk:tk
       %td
         %span#ctime1
       %td

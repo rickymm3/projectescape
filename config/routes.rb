@@ -45,6 +45,15 @@ Rails.application.routes.draw do
       post :testing
     end
   end
+  resources :nuclear do
+    collection do
+      post :playfile
+      post :update_text
+      post :clear_hint
+      post :custom_message
+      post :testing
+    end
+  end
   resources :countdown do
     collection do
       post :checkrunning
@@ -55,5 +64,7 @@ Rails.application.routes.draw do
   end
   resources :heistcountdown
   resources :wizardcountdown
+  resources :nuclearcountdown
+
   resources :leaderboard
 end
