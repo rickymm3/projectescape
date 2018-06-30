@@ -5,8 +5,6 @@ class NuclearpwController < ApplicationController
   end
 
   def checkpw
-    render layout: "countdown"
-
     @fail = false
     if params['one'] != 0.to_s
       @fail = true
@@ -21,6 +19,7 @@ class NuclearpwController < ApplicationController
     elsif params['six'] != 8.to_s
       @fail = true
     end
+    render layout: "countdown"
 
   end
 
