@@ -1,16 +1,41 @@
 .container-fluid
   .container.body-padding
+    #myModal.modal.fade{:role => "dialog", :tabindex => "-1"}
+      .modal-dialog{:role => "document"}
+        .modal-content
+          .modal-header
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+          .modal-body
+            %p HELLO THERE!
+          / .modal-footer
+          /   %a.btn{:href => "#"} Close
+          /   %a.btn.btn-primary{:href => "#"} Save changes
+
     .row
       .col-xs-12.col-sm-8.col-md-8.col-lg-8
+        %br
+        .horsham-banner
+          .campescapes-logo
+            =link_to (image_tag ('google-square'), style: 'width:100%;height:auto;max-width: 200px'), "http://www.fareharbor.com/escaperoom-horsham", target: "_blank"
+          .campescapes-text
+            .ce-text
+              =link_to "http://www.fareharbor.com/escaperoom-horsham" do 
+                .misc
+                  %span.black Project 
+                  %span.yellow Escape 
+                  brings you our  
+                  %span.yellow next
+                  amazing room at our brand new
+                  %span.green HORSHAM 
+                  location!
+                %hr 
+                .misc
+                  Book the 
+                  %span.green SPEAKEASY 
+                  today!
         %div
-          .image-gift-height.holiday-font
-            .align-left.brand-text-small-image
-              =link_to "https://fareharbor.com/embeds/book/projectescaperoom/items/29586/calendar/?flow=15759" do 
-                =image_tag ('Gift-Card.png'),  style: 'width:100%;height:auto;max-width: 75px'
-            .align-left.center.margin-top-10.padding-top-10 It's the Holiday Season! Escape Rooms are the perfect holiday outing.  Bring the family together with a Project Escape giftcard! 
-            .center 
-              =link_to "Buy Now!", "https://fareharbor.com/embeds/book/projectescaperoom/items/29586/calendar/?flow=15759"
-          %hr
+          %br
           %p.center.whitebg{itemprop:"description"}
             Ready for a
             %span.yellow
@@ -70,6 +95,10 @@
   =render "events"
 
 :javascript
+
+  / $(window).on('load',function(){
+  /   $('#myModal').modal('show');
+  / });
 
   {
   "@context": "http://schema.org",
