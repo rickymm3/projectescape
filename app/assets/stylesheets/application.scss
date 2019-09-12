@@ -621,3 +621,31 @@ ul.highlight {
   color: #5cb85c;
   font-size: 24px;
 }
+
+.contactbtn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0px 20px;
+}
+
+.btn-xl {
+    background-color: #ebbc4f;
+    border: 1px solid #black;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.btn-xl:hover {
+  background-color: black;
+}
+
+.btn-xl:active {
+  background-color: #ebbc4f;
+}
+
+.btn-xl:visited {
+  background-color: #ebbc4f;
+}
