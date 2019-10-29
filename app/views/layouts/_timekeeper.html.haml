@@ -14,7 +14,7 @@
           #wizardisrunning
       -if tk.room == "heist"
         %td.white
-          =link_to 'Heist(countdown)', heistcountdown_index_path,target: :_blank
+          =link_to 'Heist(countdown)', heistcountdown_index_path(query: "pw=pe101"),target: :_blank
         %td
           #heistisrunning
       -if tk.room == "nuclear"

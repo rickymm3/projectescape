@@ -19,6 +19,9 @@ class HeistController < ApplicationController
   end
 
   def index
+    if params[:pw] == "pe101"
+      @pwaccepted = true
+    end
     @texthints = Texthint.all
     @heist = Timekeeper.where(room:"heist").first
     render layout: "countdown"
