@@ -1,4 +1,4 @@
--if @pwaccepted
+-if params[:pwaccepted] == "true"
   %nav.navbar.navbar-default.navbar-fixed-top
     .container
       .pull-left
@@ -216,5 +216,4 @@
 
     };
 -else
-  Your IP has been logged and sent to the police.  Expect to be prosectured to the fullest extent of the law.
-  IP: #{request.remote_ip}
+  =render "heist/login_form"

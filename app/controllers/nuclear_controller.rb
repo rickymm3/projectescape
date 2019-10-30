@@ -19,6 +19,18 @@ class NuclearController < ApplicationController
     Hint.where(:room => "nuclear").first.update_attributes(message:"")
   end
 
+  def checkpw
+    pw = params[:nuclearpw][:pw]
+    if pw == "pe101"
+      @pwaccepted = true
+      @text = ""
+    else
+      @pwaccepted = false
+      @text = "If you are not accessing this from Project Escape location, your IP has been logged and sent to the police.  Expect to be prosecuted to the fullest extent of the law. IP: #{request.remote_ip}"
+    end
+    redirect_to :controller => "nuclear", pwaccepted: @pwaccepted
+  end
+
   def update_text
     @message = Hint.where(:room => "nuclear").first.message
   end

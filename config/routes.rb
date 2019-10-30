@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
   resources :heist do
     collection do
+      post :checkpw
       post :playfile
       post :update_text
       post :clear_hint
@@ -38,6 +39,7 @@ Rails.application.routes.draw do
 
   resources :wizard do
     collection do
+      post :checkpw
       post :playfile
       post :update_text
       post :clear_hint
@@ -47,6 +49,7 @@ Rails.application.routes.draw do
   end
   resources :nuclear do
     collection do
+      post :checkpw
       post :playfile
       post :update_text
       post :clear_hint

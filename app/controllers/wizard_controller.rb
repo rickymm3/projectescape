@@ -23,6 +23,18 @@ class WizardController < ApplicationController
     @message = Hint.where(:room => "wizard").first.message
   end
 
+  def checkpw
+    pw = params[:wizardpw][:pw]
+    if pw == "pe101"
+      @pwaccepted = true
+      @text = ""
+    else
+      @pwaccepted = false
+      @text = "If you are not accessing this from Project Escape location, your IP has been logged and sent to the police.  Expect to be prosecuted to the fullest extent of the law. IP: #{request.remote_ip}"
+    end
+    redirect_to :controller => "wizard", pwaccepted: @pwaccepted
+  end
+
   def custom_message
     Hint.where(:room => "wizard").first.update_attributes(message:params[:message])
     render :nothing => true

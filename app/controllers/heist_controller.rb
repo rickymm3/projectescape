@@ -18,10 +18,19 @@ class HeistController < ApplicationController
     render :nothing => true
   end
 
-  def index
-    if params[:pw] == "pe101"
+  def checkpw
+    pw = params[:heistpw][:pw]
+    if pw == "pe101"
       @pwaccepted = true
+      @text = ""
+    else
+      @pwaccepted = false
+      @text = "If you are not accessing this from Project Escape location, your IP has been logged and sent to the police.  Expect to be prosecuted to the fullest extent of the law. IP: #{request.remote_ip}"
     end
+    redirect_to :controller => "heist", pwaccepted: @pwaccepted
+  end
+
+  def index
     @texthints = Texthint.all
     @heist = Timekeeper.where(room:"heist").first
     render layout: "countdown"
