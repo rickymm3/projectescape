@@ -27,11 +27,13 @@ class CountdownController < ApplicationController
     tk.save
     @room = check_running(tk)
     if tk.room == "wizard"
+      @pwaccepted = true
       redirect_to wizard_index_path(pwaccepted: @pwaccepted)
     elsif tk.room == "heist"
       @pwaccepted = true
       redirect_to heist_index_path(pwaccepted: @pwaccepted)
     else
+      @pwaccepted = true
       redirect_to nuclear_index_path(pwaccepted: @pwaccepted)
     end
   end
