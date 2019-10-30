@@ -22,12 +22,11 @@ class HeistController < ApplicationController
     pw = params[:heistpw][:pw]
     if pw == "pe101"
       @pwaccepted = true
-      @text = ""
     else
       @pwaccepted = false
-      @text = "If you are not accessing this from Project Escape location, your IP has been logged and sent to the police.  Expect to be prosecuted to the fullest extent of the law. IP: #{request.remote_ip}"
+      @warning = true
     end
-    redirect_to :controller => "heist", pwaccepted: @pwaccepted
+    redirect_to :controller => "heist", pwaccepted: @pwaccepted, warning: @warning
   end
 
   def index

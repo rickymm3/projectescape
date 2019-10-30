@@ -217,3 +217,8 @@
     };
 -else
   =render "heist/login_form"
+  -if params[:warning] == "true"
+    .white
+      If you are not accessing this from Project Escape location, your IP has been logged. Due to malicious attacks using our systems, and the few people who have access, including current and previous employees, we will investigate with law enforcement - Expect to be prosecuted to the fullest extent of the law. 
+      %br
+      IP: #{request.remote_ip}
