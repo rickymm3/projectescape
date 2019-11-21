@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :destroy]  
 
   # GET /posts
   # GET /posts.json
@@ -33,8 +33,9 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)
 
+    @post = Post.new(post_params)
+    @post.slug = @post.heading.to_s.parameterize
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -72,12 +73,13 @@ class PostsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+
     def set_post
-      @post = Post.find(params[:id])
+      @post = Post.find_by slug: params[:slug]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:content, :heading, :identifier)
+      params.require(:post).permit(:content, :heading, :identifier, :slug)
     end
 end
