@@ -1,15 +1,11 @@
-%p#notice= notice
+.container
+  %p#notice= notice
 
-%p
-  %b Content:
-  = @post.content
-%p
-  %b Heading:
-  = @post.heading
-%p
-  %b Identifier:
-  = @post.identifier
-
-= link_to 'Edit', edit_post_path(@post)
-\|
-= link_to 'Back', posts_path
+  %p
+    %b
+      %h1 
+        = @post.heading
+  %p
+    .post-content
+      %p
+        =@post.content.html_safe

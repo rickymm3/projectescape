@@ -1,12 +1,11 @@
+%hr
+%h1 Project Escape's Blog
+%p Stay up to date with all the coolest news from the best Philly area Escape Game!
 -@posts.each do |post|
   .post-container
     .post-header
       .post-heading.pull-left
-        =post.heading
+        =link_to post.heading, post
       %p.post-date
         =post.created_at.to_date
-
       %hr
-    .post-content
-      %p
-        =post.content.html_safe
