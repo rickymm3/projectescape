@@ -1,5 +1,26 @@
+:javascript
+  $(document).ready(function(){
+    $("#myModal").modal('show');
+  });
 .container-fluid
   .container.body-padding
+    #myModal.modal.fade
+      .modal-dialog
+        .modal-content
+          .modal-header
+            %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+            %h4.center.modal-title 
+              =image_tag "Gift-Card.png", size:'240x240'
+
+          .modal-body
+            .center
+              %p As part of our initiative to get back up and running and providing a great time out with a group of your friends you may not have seen for a while - Project Escape is offering a
+              .black.center 20% DISCOUNT on GIFT CARD Purchases!
+              %p Buy today and come out with your friends and family as soon as we're open! 
+              .black.center 'GIFT4ALL20'
+              %p at checkout
+              %p Please know that we are offering PRIVATE groups for any size party from here on out!
+              %p If you have any questions call us as 484.535.3108
     .row
       .col-xs-12.col-sm-8.col-md-8.col-lg-8
         %div
