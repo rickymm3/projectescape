@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :parties
   resource :waivers
   resource :impressions
+  resources :axes
 
   resources :heist do
     collection do

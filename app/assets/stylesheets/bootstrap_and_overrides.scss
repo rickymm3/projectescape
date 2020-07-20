@@ -53,6 +53,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   .navbar-nav {
     padding-left: 0px;
     li > a {
@@ -115,15 +116,36 @@ body {
   }
 }
 
+@media (max-width: 550px) {
+  .ca-logo {
+    width: 200px!important;
+    height: auto;
+  }
+}
+
 @media (max-width: 475px) {
   .brand-text-small-text {
     font-size: 20px;
-
   }
+
 
 }
 //md screen
 @media (max-width: 992px) {
+  .countdown {
+    display:none!important;
+  }
+  .background-axe {
+    height: 422px!important;
+  }
+}
+@media (max-width: 750px) {
+  .background-axe {
+    height: 281px!important;
+  }
+}
+
+@media (max-width: 1200px) {
   .countdown {
     display:none!important;
   }

@@ -236,6 +236,30 @@ pre {
   }
 }
 
+.location2 {
+  color:black;
+  display: inline-block;
+  font-size: 14px!important;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  font-family: 'Passion One', cursive;
+  letter-spacing: 1px;
+  a {
+    color: white;
+  }
+  a:hover {
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+  }
+  .phone {
+    color: white;
+  }
+  .phone-number {
+    color: #231f20;
+  }
+}
+
 .loc_icon {
   padding-bottom: 0px!important;
 }
@@ -648,4 +672,34 @@ ul.highlight {
 
 .btn-xl:visited {
   background-color: #ebbc4f;
+}
+
+.left-ca-logo {
+  float: left;
+}
+
+.right-ca-logo {
+  padding-top: 20px;
+}
+
+.background-axe{
+  width: 100%;
+  height: 500px;
+  background-image: image-url("combo.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.ca-logo-axe {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.moreinfo-axe {
+  background-color: #652d93;
+  color: white;
+  p {font-size: 18px;}
+  h1 {font-size: 35px}
+  padding: 10px 40px;
 }
