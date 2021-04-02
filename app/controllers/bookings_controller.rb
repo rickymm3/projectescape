@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
-  impressionist :actions=>[:index],:unique => [:session_hash]
+  # impressionist :actions=>[:index],:unique => [:session_hash]
   # GET /bookings
   # GET /bookings.json
   def index

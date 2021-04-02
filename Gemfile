@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '2.6.3'
+ruby '2.6.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
 # Use sqlite3 as the database for Active Record
@@ -21,7 +21,6 @@ gem 'jbuilder'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem "haml-rails", "~> 2.0"
-gem 'impressionist'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 gem "font-awesome-rails"
@@ -31,7 +30,7 @@ gem 'sitemap_generator'
 gem 'httparty'
 gem 'rmagick'
 gem 'gruff'
-gem 'ckeditor'
+gem "ckeditor"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
