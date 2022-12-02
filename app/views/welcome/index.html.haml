@@ -1,29 +1,5 @@
-:javascript
-  $(document).ready(function(){
-    $("#myModal").modal('show');
-  });
 .container-fluid
   .container.body-padding
-    #myModal.modal.fade
-      .modal-dialog
-        .modal-content
-          .modal-header
-            %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
-            %h4.center.modal-title 
-              =image_tag "mask.png", size:'240x240'
-
-          .modal-body
-            .center
-              %h1 Project Escape is Open!
-              %p Get your family and friends together for a fun and most especially, SAFE, outing!
-              %p.h4 Project Escape is doing everything we can to ensure the safety of our guests.
-              %p Here are some of the safety precautions we are taking:
-              %p 1. Disinfecting our rooms and wiping down each prop after EVERY visit.
-              %p 2. Private Rooms only! You'll only be playing with family and friends!
-              %p 3. Having employees and guests wear masks at all times.
-              %p 4. Washing hands before each game.
-              %p 5. Allowing easy rescheduling if anyone feels ill or sick prior to their visit.
-              %p 6. We are also open to any suggestions or special requirements! Just give us a call to discuss!
     .row
       .col-xs-12.col-sm-8.col-md-8.col-lg-8
         %br
@@ -77,8 +53,6 @@
               and stealing back the elegant Millennium Diamond. Featuring professional
               voice acting, and a series of dynamic puzzles, our first room is only the beginning in a line of
               expertly crafted escape room games.  Book now to experience the phenomenon.
-        .posts
-          =render "posts"
       #fb-root
       .twitter-hide.col-xs-12.col-sm-4.col-md-4.col-lg-4.border-right
         .fb-page-container
